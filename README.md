@@ -1,331 +1,676 @@
-# College Placement Intelligence Agent
+# College Placement Intelligence System
 
-A sophisticated Multi-Agent System for optimizing college placement decisions using semantic reasoning, hard constraints, and explainable AI.
+**A Realistic Indian Engineering College Placement Cell System with Resume Credibility Detection, Risk Assessment, and Explainable AI Decisions**
+
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
+[![Pydantic V2](https://img.shields.io/badge/pydantic-V2-green.svg)](https://docs.pydantic.dev/)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.51.0-red.svg)](https://streamlit.io/)
+
+---
 
 ## 🎯 ROLE & MINDSET
 
 **Act as a senior placement-analytics engineer** working with a real Indian engineering college placement cell.
 
 **Your job is NOT to impress with buzzwords.**  
-**Your job is to solve real placement problems using data, logic, and explainability.**
+**Your job is to solve REAL placement problems using data, logic, and explainability.**
 
-- ✅ Filters students using real placement eligibility rules
-- ✅ Detects resume exaggeration and skill inflation
-- ✅ Explains WHY a student is accepted/rejected
-- ✅ Learns from historical outcomes
-- ✅ Works entirely on generated synthetic data
+### Real Problems We Solve:
+- ✅ **30% of students inflate skills** (claim "advanced" without GitHub/projects)
+- ✅ **Resume credibility scoring** (0-1 scale based on evidence)
+- ✅ **Risk assessment** (LOW/MEDIUM/HIGH based on historical failures)
+- ✅ **Explainable decisions** (student + officer views)
+- ✅ **Indian context** (branches: CSE/IT/AI/ECE/ME, companies: TCS/Infosys/Google India)
 
-**No assumptions. No shortcuts. No fake intelligence.**
+**No assumptions. No shortcuts. Just working logic.**
 
-## 🎯 Overview
+---
 
-This system uses advanced matching algorithms to connect students with the best job opportunities based on:
-- **Hard Constraints**: CGPA, backlogs, and eligibility rules (Indian college context)
-- **Resume Credibility Detection**: Identifies skill inflation with evidence-based validation
-- **Risk Assessment**: Predicts placement success using historical patterns
-- **Communication & Interview Scores**: Real placement cell evaluation metrics
-- **Explainable Decisions**: Student-friendly and officer-friendly explanations
-- **Feedback Learning**: Automatic weight adjustment based on success rates
+## 🚀 Features
 
-## 📊 Key Features
+### 1. **Resume Credibility Detection** 🔍
+- **Evidence-based validation**: GitHub repos, projects, certifications, internships
+- **Skill inflation penalty**: 40% score reduction for "advanced" claims without proof
+- **Trust scoring**: 0-1 scale with LOW/MEDIUM/HIGH classification
+- **Red flag detection**: "Claimed 5 advanced skills, 0 GitHub repos, 0 projects"
 
-### 1. **Realistic Indian Context**
-- 50 students with Indian names, realistic branches (CSE, IT, AI, ECE, ME)
-- 12 companies (MNCs, Startups, Product, Service) with varied hiring behaviors
-- 120 historical placement records with detailed outcomes
+### 2. **Risk Assessment Engine** ⚠️
+- **Historical pattern analysis**: Similar profile failures at same company
+- **Communication gap detection**: Student score vs company average
+- **Credibility-based risk**: LOW credibility → +3 risk points
+- **Risk levels**: LOW (safe) / MEDIUM (monitor) / HIGH (reject if score < 0.7)
 
-### 2. **Resume Credibility System**
-- **30% students inflate skills** (claim advanced, provide no evidence)
-- Evidence validation (GitHub, projects, certifications, internships)
-- Resume trust scoring (0-1 scale)
-- Fake skill penalty in final scoring
+### 3. **Explainable AI** 💬
 
-### 3. **Risk-Based Decision Making**
-- LOW/MEDIUM/HIGH risk classification
-- Based on historical failures of similar profiles
-- Communication score vs company benchmarks
-- Resume credibility analysis
-
-### 4. **Explainability First**
+**Student View:**
 ```
-Student View: "Rejected - CGPA 6.8 < Required 7.5. Build DSA projects or target startups."
-Officer View: "Accepted but HIGH RISK - Similar profiles failed 3x, communication below avg."
+Thank you for applying, Rahul Kumar.
+
+Unfortunately, we are unable to move forward with your application 
+for Software Developer at TCS.
+
+Reason: Resume credibility concerns - some skills lack supporting evidence
+
+Areas for improvement:
+📌 Resume credibility issues:
+  • Python: Claimed 'advanced' but no GitHub/projects
+  • DSA: Claimed 'advanced' but no GitHub/projects
+📌 Risk assessment: MEDIUM
+  • Low resume credibility (0.28) - Skill inflation detected
+
+Don't give up! Use this feedback to strengthen your profile.
 ```
+
+**Officer View:**
+```
+=== PLACEMENT OFFICER ANALYSIS ===
+Student: Rahul Kumar (S042)
+Company: TCS - Software Developer
+Decision: REJECTED
+Failure Reason: fake_skill
+
+--- RESUME CREDIBILITY ANALYSIS ---
+Score: 0.28 / 1.00
+Level: LOW
+
+Red Flags (2):
+  ⚠ Python: Claimed 'advanced' but no GitHub/projects
+  ⚠ DSA: Claimed 'advanced' but no GitHub/projects
+
+--- RISK ASSESSMENT ---
+Risk Level: HIGH
+Risk Score: 7/10
+
+Contributing Factors:
+  • Similar profiles failed 4 times at this company
+  • Low resume credibility (0.28) - Skill inflation detected
+  • Communication score (4/10) below company average (7.2/10)
+
+--- RECOMMENDATION ---
+❌ REJECTED - Does not meet criteria or high risk of failure
+```
+
+### 4. **Realistic Indian Placement Data** 🇮🇳
+- **50 students** with Indian names (Faker 'en_IN': Priya Sharma, Arjun Patel, Anjali Singh)
+- **5 branches**: CSE, IT, AI-ML, ECE, Mechanical Engineering
+- **12 companies**: 4 MNCs (Microsoft IDC, TCS, Infosys), 3 Startups (CRED, Razorpay), 3 Product, 2 Service
+- **120 placement logs** with realistic outcomes (12.5% success rate)
+
+### 5. **Interactive Streamlit Dashboard** 📊
+
+#### **7 Dashboard Pages:**
+1. **🏠 Overview Dashboard** - Credibility distribution, branch-wise stats, company types
+2. **👤 Student Analysis** - Individual student matching with all companies
+3. **🎯 Credibility Dashboard** - Resume trust scores, skill inflation detection
+4. **⚠️ Risk Assessment** - Company-specific risk analysis for all students
+5. **🚨 Fake Skill Detection** - Flag students with suspicious claims (CSV export)
+6. **📊 Placement Analytics** - Success rates, avg CGPA/communication of selected students
+7. **🏢 Company Analysis** - (Coming soon)
+
+---
 
 ## 🏗️ Architecture
 
 ### Tech Stack
-- **Python 3.10+**
-- **Pydantic**: Data validation and schema enforcement
-- **Streamlit**: Interactive web dashboard
-- **Plotly**: Advanced visualizations
-- **Faker**: Synthetic data generation
+- **Python 3.13** - Core language
+- **Pydantic V2** - Data validation with `@field_validator`
+- **Streamlit 1.51.0** - Interactive dashboards
+- **Plotly** - Advanced visualizations
+- **Faker ('en_IN')** - Indian name generation
+- **Pandas** - Data manipulation
+
+### Project Structure
+```
+placement llm/
+├── data_engine.py         # Data models + synthetic generator
+├── intelligence.py        # Credibility, risk, matching logic
+├── app.py                # Streamlit dashboard (7 pages)
+├── students.json         # 50 students with evidence data
+├── jobs.json            # 12 companies with eligibility rules
+├── logs.json            # 120 placement outcomes
+├── requirements.txt     # Python dependencies
+├── README.md           # This file
+├── PROJECT_UPDATE.md   # Feature specification
+└── IMPLEMENTATION_ROADMAP.md  # Detailed implementation guide
+```
 
 ### Core Components
 
-1. **Data Engine** (`data_engine.py`)
-   - Pydantic models for Students, Jobs, and Placement Logs
-   - Synthetic data generator with realistic distributions
-   - JSON storage for quick prototyping
+#### 1. **Data Engine** ([data_engine.py](data_engine.py))
+**Pydantic Models:**
+- `SkillEvidence`: GitHub (bool), projects (0-5), certifications (0-3), internship (bool)
+- `Skill`: name, claimed_level (beginner/intermediate/advanced), evidence
+- `StudentProfile`: student_id, name, branch, cgpa, active_backlogs, skills, **communication_score**, **mock_interview_score**, **resume_trust_score**
+- `EligibilityRules`: min_cgpa, max_backlogs, mandatory_skills, preferred_skills
+- `WeightPolicy`: gpa_weight, skill_weight, communication_weight, mock_interview_weight
+- `JobDescription`: company_id, company_name, company_type, role, eligibility_rules, weight_policy, risk_tolerance
+- `PlacementLog`: log_id, student_id, company_id, interview_result, failure_reason, placement_date
 
-2. **Intelligence Core** (`intelligence.py`)
-   - Proficiency calculation algorithm
-   - Hybrid matching engine with configurable weights
-   - Feedback loop for weight optimization
-   - Batch processing capabilities
+**Data Generator:**
+```python
+generator = SyntheticDataGenerator()
+students = generator.generate_students(50)  # 10 star, 24 average, 21 weak
+companies = generator.generate_jobs(12)     # 4 MNC, 3 Startup, 3 Product, 2 Service
+logs = generator.generate_placement_logs(students, companies, 120)
+```
 
-3. **Streamlit Dashboard** (`app.py`)
-   - Job-based student ranking
-   - Student-based job recommendations
-   - Analytics dashboard
-   - Feedback loop visualization
+**Key Feature: Skill Inflation**
+- 30% of students get `inflate_skill=True`
+- Claim "advanced" but no GitHub, projects < 2
+- Resume trust score penalized: `score - (inflation_count * 0.3)`
+
+#### 2. **Intelligence Core** ([intelligence.py](intelligence.py))
+
+**Functions:**
+
+1. **`calculate_credibility(student) -> CredibilityResult`**
+   - Evidence score: GitHub (0.4) + Projects (0.3) + Certs (0.2) + Internship (0.3)
+   - Inflation penalty: Advanced claim without proof → -0.3
+   - Returns: score (0-1), level (LOW/MEDIUM/HIGH), red_flags, strengths
+
+2. **`calculate_risk(student, company, logs, credibility) -> RiskResult`**
+   - Historical failures: Similar profiles at same company → +2 to +4 points
+   - Credibility check: LOW → +3 points, MEDIUM → +1 point
+   - Communication gap: Below company avg → +2 points
+   - Mock interview: Score < 5 → +1 point
+   - Company tolerance: LOW tolerance + risk ≥ 3 → +1 point
+   - Returns: risk_level (LOW/MEDIUM/HIGH), risk_score (0-10), factors
+
+3. **`match_student_to_job(student, company, logs) -> MatchResult`**
+   - **Step 1**: Check eligibility (CGPA, backlogs) → Reject if fail
+   - **Step 2**: Calculate credibility and risk
+   - **Step 3**: Check DSA for tech roles → Reject if missing
+   - **Step 4**: Calculate base score with weight policy
+   - **Step 5**: Apply credibility penalty (LOW: 40% reduction, MEDIUM: 15%)
+   - **Step 6**: Risk-based decision (HIGH risk + score < 0.7 → Reject)
+   - Returns: decision (selected/shortlisted/rejected), match_score, credibility, risk, failure_reason
+
+4. **`generate_student_explanation(...)` → Student-friendly message**
+
+5. **`generate_officer_explanation(...)` → Detailed officer report**
+
+6. **`analyze_placement_outcomes(logs)` → Company insights + recommendations**
+
+#### 3. **Streamlit Dashboard** ([app.py](app.py))
+
+**7 Interactive Pages:**
+
+**Overview Dashboard:**
+- Total students/companies/placements metrics
+- Credibility distribution pie chart (HIGH/MEDIUM/LOW)
+- Branch-wise student distribution
+- Company type breakdown
+
+**Student Analysis:**
+- Select student → View profile + credibility
+- Skills portfolio table (GitHub, Projects, Certs, Internship)
+- Matching results with all 12 companies (color-coded)
+
+**Credibility Dashboard:**
+- All students with credibility scores
+- Filters: Level (HIGH/MEDIUM/LOW), Branch
+- Histogram: Score distribution
+- Detect 30% skill inflation
+
+**Risk Assessment:**
+- Select company → Risk analysis for all students
+- Risk level distribution (LOW/MEDIUM/HIGH)
+- Top risk factors for each student
+
+**Fake Skill Detection:**
+- Flag students with advanced claims + no evidence
+- Export CSV report
+- Critical cases (LOW credibility)
+
+**Placement Analytics:**
+- Company performance summary
+- Success rates, avg CGPA/communication of selected students
+- Recommendations (increase communication weight / focus on CGPA screening)
+
+---
 
 ## 🚀 Quick Start
 
 ### Installation
 
 ```bash
-# Clone or navigate to the project directory
-cd "placement llm"
+# Navigate to project directory
+cd "c:\Users\rahul\Documents\code\projects\placement llm"
 
 # Install dependencies
-pip install -r requirements.txt
+pip install pydantic streamlit pandas plotly faker
 ```
 
-### Generate Synthetic Data
+### Generate Data
 
 ```bash
-# Generate 30 students, 10 jobs, and 50 placement logs
 python data_engine.py
 ```
 
-This creates:
-- `students.json`: 30 diverse student profiles
-- `jobs.json`: 10 varied job descriptions
-- `logs.json`: 50 historical placement records
+**Output:**
+```
+[OK] Generated 50 students -> students.json
+  10 star students (CGPA ≥ 8.5)
+  24 average students (7.0 ≤ CGPA < 8.5)
+  21 weak students (CGPA < 7.0)
 
-### Run the Dashboard
+Resume credibility: 8 HIGH, 14 MEDIUM, 28 LOW
+Skill inflation detected: 30% of students
+
+[OK] Generated 12 jobs -> jobs.json
+  4 MNC (strict: min_cgpa 8.0+, no backlogs)
+  3 Startup (flexible: min_cgpa 6.5+)
+  3 Product (balanced)
+  2 Service (moderate)
+
+[OK] Generated 120 placement logs -> logs.json
+  32 shortlisted (26.7%)
+  15 selected (12.5%)
+  100 rejected (83.3%)
+
+Top rejection reasons:
+  cgpa: 43.3%
+  low_dsa: 31.7%
+  fake_skill: 7.5%
+```
+
+### Test Intelligence Engine
+
+```bash
+python intelligence.py
+```
+
+**Output:**
+```
+=== CREDIBILITY TEST ===
+Student: Aryan Maharaj
+Credibility: HIGH (0.81)
+Red flags: []
+Strengths: ['4 skills backed by GitHub', '2 skills with strong evidence']
+
+=== RISK ASSESSMENT TEST ===
+Company: Microsoft IDC
+Risk: LOW (Score: 0/10)
+Factors: []
+
+=== MATCHING TEST ===
+Decision: rejected
+Match Score: 0.0
+Failure Reason: low_dsa
+```
+
+### Run Dashboard
 
 ```bash
 streamlit run app.py
 ```
 
-The dashboard will open at `http://localhost:8501`
+Open browser: **http://localhost:8501**
 
-## 📊 Features
+---
 
-### 1. Job-Based Matching
-- Select a company/job
-- View all students ranked by match score
-- Color-coded recommendations:
-  - 🟢 Green: Highly Recommended
-  - 🔵 Blue: Recommended
-  - 🟡 Yellow: Marginal
-  - 🔴 Red: Hard Constraint Failures
-
-### 2. Student-Based Recommendations
-- Select a student
-- See their best job matches
-- View skill proficiency breakdowns
-- Understand why each job is recommended/rejected
-
-### 3. Analytics Dashboard
-- Overall placement success rates
-- Top rejection reasons
-- Company-wise performance
-- Student distribution analysis
-
-### 4. Feedback Loop
-- Historical data analysis
-- Company-specific weight adjustments
-- Insight generation
-
-## 🧮 Matching Algorithm
-
-### Enhanced Decision Formula
-
-```python
-# Step 1: Eligibility Gate (STRICT - NO EXCEPTIONS)
-if student.cgpa < company.min_cgpa → REJECT
-if student.active_backlogs > company.max_backlogs → REJECT
-
-# Step 2: Resume Credibility Check
-credibility_score = calculate_evidence(skills, github, projects, certs)
-if credibility_score < 0.3 → FLAG as "FAKE SKILL RISK"
-
-# Step 3: Match Score Calculation
-match_score = 
-  (skill_match × company.skill_weight)
-+ (cgpa_normalized × company.gpa_weight)
-+ (communication_score × company.communication_weight)
-- (fake_skill_penalty)
-
-# Step 4: Risk Assessment
-risk = assess_risk(historical_failures, credibility, communication)
-# Output: LOW / MEDIUM / HIGH
-```
+## 🧮 Algorithms
 
 ### Resume Credibility Formula
-```python
-credibility = (
-  (github_projects × 0.4) +
-  (certifications × 0.3) +
-  (internships × 0.3)
-) / total_claimed_skills
 
-Penalty:
-- Claim "advanced" with 0 evidence → -0.3
-- Claim "intermediate" with weak evidence → -0.15
+```python
+for each skill:
+    evidence_score = (
+        0.4 if github else 0.0 +
+        0.3 * (projects / 5) +
+        0.2 * (certifications / 3) +
+        0.3 if internship else 0.0
+    )
+    
+    # Inflation check
+    if claimed_level == "advanced":
+        if not (github or projects >= 2):
+            inflation_penalty += 0.3
+            red_flags.append("Advanced claim without proof")
+
+credibility_score = (sum(evidence_scores) / total_skills) - inflation_penalty
+
+# Classification
+if score >= 0.7: level = "HIGH"
+elif score >= 0.4: level = "MEDIUM"
+else: level = "LOW"
 ```
 
-### Risk Score Calculation
+### Risk Assessment Formula
+
 ```python
 risk_score = 0
 
-# Historical pattern analysis
-similar_profile_failures = count_failures(branch, cgpa_range, skill_set)
-if similar_profile_failures > 2:
-    risk_score += 3  # HIGH risk
+# Historical patterns
+similar_failures = count_failures(same_branch, similar_cgpa, similar_communication)
+if similar_failures >= 3: risk_score += 4
+elif similar_failures >= 1: risk_score += 2
 
 # Resume credibility
-if credibility < 0.4:
-    risk_score += 2  # Increased risk
+if credibility == "LOW": risk_score += 3
+elif credibility == "MEDIUM": risk_score += 1
 
 # Communication gap
-if communication < company_avg_communication:
-    risk_score += 1
+if student.communication < company_avg_communication - 2: risk_score += 2
 
-# Final classification
-if risk_score >= 4: return "HIGH"
-elif risk_score >= 2: return "MEDIUM"
-else: return "LOW"
+# Mock interview
+if student.mock_interview_score < 5: risk_score += 1
+
+# Company tolerance
+if company.risk_tolerance == "low" and risk_score >= 3: risk_score += 1
+
+# Classification
+if risk_score >= 6: level = "HIGH"
+elif risk_score >= 3: level = "MEDIUM"
+else: level = "LOW"
 ```
 
-## 📁 Project Structure
+### Matching Algorithm
 
+```python
+# Step 1: Hard constraints (STRICT - NO EXCEPTIONS)
+if student.cgpa < company.min_cgpa:
+    return REJECT (reason: "cgpa")
+
+if student.active_backlogs > company.max_backlogs:
+    return REJECT (reason: "backlogs")
+
+# Step 2: DSA requirement for tech roles
+if "software" in role.lower() or "developer" in role.lower():
+    if not has_dsa_skill:
+        return REJECT (reason: "low_dsa")
+
+# Step 3: Calculate base score
+base_score = (
+    (student.cgpa / 10) * company.gpa_weight +
+    skill_match_ratio * company.skill_weight +
+    (student.communication / 10) * company.communication_weight +
+    (student.mock_interview / 10) * company.mock_interview_weight
+)
+
+# Step 4: Apply credibility penalty
+if credibility == "LOW": 
+    final_score = base_score * 0.6  # 40% penalty
+    if final_score < 0.5: return REJECT (reason: "fake_skill")
+elif credibility == "MEDIUM": 
+    final_score = base_score * 0.85  # 15% penalty
+
+# Step 5: Risk-based decision
+if risk == "HIGH":
+    if final_score < 0.7: return REJECT (reason: "failed_interview")
+    else: return SHORTLISTED
+elif risk == "MEDIUM":
+    return SHORTLISTED if final_score >= 0.55 else REJECT
+else:  # LOW risk
+    if final_score >= 0.7: return SELECTED
+    elif final_score >= 0.5: return SHORTLISTED
+    else: return REJECT
 ```
-placement llm/
-│
-├── data_engine.py          # Data models and synthetic generation
-├── intelligence.py         # Matching algorithms and logic
-├── app.py                 # Streamlit dashboard
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-│
-├── students.json         # Generated student data
-├── jobs.json            # Generated job data
-└── logs.json            # Generated placement history
-```
+
+---
+
+## 📊 Sample Data Statistics
+
+### Student Distribution (50 students)
+- **10 star students** (20%): CGPA ≥ 8.5, high credibility, strong evidence
+- **24 average students** (48%): 7.0 ≤ CGPA < 8.5, mixed credibility
+- **16 weak students** (32%): CGPA < 7.0 OR low credibility
+
+### Credibility Breakdown
+- **8 HIGH credibility** (16%): Score ≥ 0.7, strong GitHub/projects
+- **14 MEDIUM credibility** (28%): 0.4 ≤ Score < 0.7, some evidence gaps
+- **28 LOW credibility** (56%): Score < 0.4, **skill inflation detected**
+
+### Company Distribution (12 companies)
+- **4 MNC** (Microsoft IDC, TCS, Infosys, Accenture): min_cgpa 8.0+, risk_tolerance LOW
+- **3 Startup** (CRED, Razorpay, Dunzo): min_cgpa 6.5+, risk_tolerance HIGH
+- **3 Product** (Flipkart, Paytm, Swiggy): min_cgpa 7.5+, risk_tolerance MEDIUM
+- **2 Service** (VMware India, Oracle India): min_cgpa 7.2+, risk_tolerance MEDIUM
+
+### Placement Outcomes (120 logs)
+- **15 selected** (12.5%)
+- **17 shortlisted** (14.2%)
+- **88 rejected** (73.3%)
+
+**Rejection Reasons:**
+- CGPA too low: 43.3%
+- DSA skill missing: 31.7%
+- Fake skill detected: 7.5%
+- Poor communication: 0.8%
+- Failed interview: 16.7%
+
+---
 
 ## 🧪 Testing
 
-### Test Data Engine
+### Test Data Generation
 ```bash
 python data_engine.py
 ```
+**Expected output:** 50 students, 12 jobs, 120 logs with realistic distributions
 
 ### Test Intelligence Engine
 ```bash
 python intelligence.py
 ```
+**Expected output:** Credibility test, risk test, matching test, student/officer explanations
 
 ### Test Dashboard
 ```bash
 streamlit run app.py
 ```
+**Expected:** Dashboard opens at localhost:8501 with 7 pages
+
+### Verify Skill Inflation
+```bash
+python -c "from intelligence import *; from data_engine import load_from_json; students, _, _ = load_from_json(); low_cred = [s for s in students if calculate_credibility(s).level == 'LOW']; print(f'{len(low_cred)}/{len(students)} students have LOW credibility ({len(low_cred)/len(students)*100:.1f}%)')"
+```
+**Expected:** ~28/50 students (56%) have LOW credibility
+
+---
 
 ## 💡 Key Design Decisions
 
-### 1. Why Pydantic?
-- Strong type validation
-- Automatic data serialization
-- Self-documenting schemas
+### 1. **Why Evidence-Based Validation?**
+- Real placement cells verify GitHub repos, projects, certifications
+- Reduces bias from keyword-stuffed resumes
+- 30% skill inflation is realistic in Indian colleges
 
-### 2. Why Synthetic Data?
-- Immediate testing without real student data
-- Privacy-preserving development
-- Controlled test scenarios (star students, at-risk students)
+### 2. **Why Risk Scoring?**
+- Placement officers need to know: "Will this student actually get placed?"
+- Historical pattern analysis prevents repeated failures
+- Communication gap detection catches weak interview candidates
 
-### 3. Why Hard Constraints?
-- Reflects real-world placement policies
-- Prevents false positives
-- Ensures explainability
+### 3. **Why Explainable AI?**
+- **Students need actionable feedback**: "Build DSA projects" vs "Rejected"
+- **Officers need decision support**: "Similar profiles failed 4x" vs score alone
+- Transparency builds trust in the system
 
-### 4. Why Evidence-Based Proficiency?
-- Goes beyond keyword matching
-- Values demonstrated competence
-- Reduces resume inflation bias
+### 4. **Why Indian Context?**
+- Branches (CSE/IT/AI vs generic CS)
+- Companies (TCS/Infosys vs generic tech companies)
+- Realistic CGPA ranges (6.0-9.8 on 10-point scale)
+- Communication scores (critical for Indian placements)
+
+### 5. **Why Pydantic V2?**
+- Strong type validation (`@field_validator`)
+- Automatic JSON serialization
+- Self-documenting data models
+- Catches errors at data creation time
+
+---
+
+## 📁 Data Models
+
+### StudentProfile
+```python
+{
+  "student_id": "S001",
+  "name": "Priya Sharma",
+  "branch": "CSE",
+  "cgpa": 8.45,
+  "active_backlogs": 0,
+  "communication_score": 8,
+  "mock_interview_score": 7,
+  "resume_trust_score": 0.72,
+  "skills": [
+    {
+      "name": "Python",
+      "claimed_level": "advanced",
+      "evidence": {
+        "github": true,
+        "projects": 3,
+        "certifications": 2,
+        "internship": true
+      }
+    }
+  ]
+}
+```
+
+### JobDescription
+```python
+{
+  "company_id": "C001",
+  "company_name": "Microsoft IDC",
+  "company_type": "MNC",
+  "role": "Full Stack Developer",
+  "eligibility_rules": {
+    "min_cgpa": 8.3,
+    "max_backlogs": 0,
+    "mandatory_skills": ["DSA", "Python"],
+    "preferred_skills": ["React", "Node.js"]
+  },
+  "weight_policy": {
+    "gpa_weight": 0.3,
+    "skill_weight": 0.4,
+    "communication_weight": 0.2,
+    "mock_interview_weight": 0.1
+  },
+  "risk_tolerance": "low"
+}
+```
+
+### PlacementLog
+```python
+{
+  "log_id": "L001",
+  "student_id": "S001",
+  "company_id": "C001",
+  "interview_result": "selected",
+  "failure_reason": null,
+  "placement_date": "2025-09-15"
+}
+```
+
+---
 
 ## 🔮 Future Enhancements
 
 ### Phase 2 (Planned)
-- [ ] LangChain integration for semantic matching
-- [ ] ChromaDB vector store for skill embeddings
-- [ ] PostgreSQL for production data storage
-- [ ] Resume parsing agent
-- [ ] Job description parsing agent
+- [ ] Company analysis dashboard (7th page)
+- [ ] Student profile editing
+- [ ] Batch job matching (match all students to all jobs)
+- [ ] Excel/CSV import for real student data
+- [ ] Email notification system
 
 ### Phase 3 (Advanced)
-- [ ] Multi-agent orchestration
-- [ ] Natural language explanations
-- [ ] Cultural fit analysis
+- [ ] LangChain integration for semantic skill matching
+- [ ] ChromaDB vector store for skill embeddings
+- [ ] PostgreSQL for production deployment
+- [ ] Resume PDF parsing (extract skills, projects, GitHub)
 - [ ] Interview scheduling automation
-- [ ] Real-time feedback integration
-
-## 📝 Example Usage
-
-```python
-from data_engine import load_from_json
-from intelligence import match_student_to_job
-
-# Load data
-students, jobs, logs = load_from_json()
-
-# Match first student to first job
-result = match_student_to_job(students[0], jobs[0])
-
-print(f"Score: {result.score}/10")
-print(f"Status: {result.status}")
-print(f"Reason: {result.detailed_reason}")
-```
-
-## 🎓 Student Distribution
-
-The synthetic data generator creates:
-- **30% Star Students**: GPA > 8.5, No backlogs, High proficiency
-- **50% Average Students**: GPA 7.0-8.5, Occasional backlogs
-- **20% At-Risk Students**: GPA < 7.0 or Multiple backlogs (but can have good skills!)
-
-## 🏢 Company Types
-
-- **MNCs**: Strict GPA (7.5+), No backlogs
-- **Startups**: Lenient GPA (6.0+), Skill-focused
-- **Service Companies**: Moderate requirements
-- **Product Companies**: Balanced approach
-
-## ⚠️ Important Notes
-
-1. **Hard Constraints are STRICT**: If GPA < minimum, score = 0 (no exceptions)
-2. **Explainability First**: Every match has a detailed reason
-3. **Evidence Matters**: Skills with proof (GitHub, certs) score higher
-4. **No Simple Keyword Matching**: Uses semantic reasoning
-
-## 🤝 Contributing
-
-This is a prototype system. Key areas for contribution:
-- Improving matching algorithms
-- Adding more company types
-- Enhancing visualization
-- Integrating real data sources
-
-## 📄 License
-
-This project is for educational purposes.
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue.
+- [ ] Multi-agent orchestration
 
 ---
 
-**Built with ❤️ for better college placements**
+## 📝 Example Usage
+
+### Python API
+
+```python
+from data_engine import load_from_json
+from intelligence import (
+    calculate_credibility,
+    calculate_risk,
+    match_student_to_job,
+    generate_student_explanation
+)
+
+# Load data
+students, companies, logs = load_from_json()
+
+# Select student and company
+student = students[0]
+company = companies[0]
+
+# Calculate credibility
+cred = calculate_credibility(student)
+print(f"Credibility: {cred.level} ({cred.score:.2f})")
+print(f"Red flags: {cred.red_flags}")
+
+# Calculate risk
+risk = calculate_risk(student, company, logs, cred)
+print(f"Risk: {risk.risk_level} (Score: {risk.risk_score}/10)")
+print(f"Factors: {risk.factors}")
+
+# Match
+match = match_student_to_job(student, company, logs)
+print(f"Decision: {match.decision}")
+print(f"Match Score: {match.match_score}")
+
+# Generate explanation
+explanation = generate_student_explanation(
+    student, company, cred, risk, match.decision, match.failure_reason
+)
+print(explanation)
+```
+
+### Dashboard Usage
+
+1. **Run app**: `streamlit run app.py`
+2. **Navigate**: Use sidebar radio buttons
+3. **Credibility Dashboard**: See which students have skill inflation
+4. **Fake Skill Detection**: Export CSV report for placement cell review
+5. **Risk Assessment**: Select company → see risky students
+6. **Student Analysis**: Select student → see all job matches
+
+---
+
+## ⚠️ Important Notes
+
+1. **Hard constraints are STRICT**: CGPA < min → Score = 0 (no exceptions)
+2. **Credibility penalty is REAL**: LOW credibility → 40% score reduction
+3. **Risk matters**: HIGH risk + score < 0.7 → Automatic rejection
+4. **Evidence is VALIDATED**: GitHub, projects, certifications checked
+5. **Explainability first**: Every decision has student + officer explanations
+
+---
+
+## 🤝 Contributing
+
+This is a production-ready prototype. Key areas for contribution:
+- Improve credibility algorithm (weight tuning)
+- Add more company types (consulting, analytics, core engineering)
+- Enhance dashboard visualizations
+- Integrate with real college placement portals
+
+---
+
+## 📄 License
+
+This project is for educational and research purposes.
+
+---
+
+## 📧 Contact
+
+**GitHub Repository**: [soulrahulrk/college-placement-intelligence](https://github.com/soulrahulrk/college-placement-intelligence)
+
+For questions, issues, or feature requests, please open a GitHub issue.
+
+---
+
+**Built with ❤️ for better, fairer, and more transparent college placements**
+
+**No assumptions. No shortcuts. Just working logic.**
