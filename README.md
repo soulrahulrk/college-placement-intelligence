@@ -2,13 +2,55 @@
 
 A sophisticated Multi-Agent System for optimizing college placement decisions using semantic reasoning, hard constraints, and explainable AI.
 
+## 🎯 ROLE & MINDSET
+
+**Act as a senior placement-analytics engineer** working with a real Indian engineering college placement cell.
+
+**Your job is NOT to impress with buzzwords.**  
+**Your job is to solve real placement problems using data, logic, and explainability.**
+
+- ✅ Filters students using real placement eligibility rules
+- ✅ Detects resume exaggeration and skill inflation
+- ✅ Explains WHY a student is accepted/rejected
+- ✅ Learns from historical outcomes
+- ✅ Works entirely on generated synthetic data
+
+**No assumptions. No shortcuts. No fake intelligence.**
+
 ## 🎯 Overview
 
 This system uses advanced matching algorithms to connect students with the best job opportunities based on:
-- **Hard Constraints**: GPA, backlogs, and experience requirements
-- **Skill Matching**: Semantic analysis of must-have and good-to-have skills
-- **Proficiency Depth**: Evidence-based skill scoring (GitHub, certifications, projects)
-- **Feedback Loop**: Historical data analysis for continuous improvement
+- **Hard Constraints**: CGPA, backlogs, and eligibility rules (Indian college context)
+- **Resume Credibility Detection**: Identifies skill inflation with evidence-based validation
+- **Risk Assessment**: Predicts placement success using historical patterns
+- **Communication & Interview Scores**: Real placement cell evaluation metrics
+- **Explainable Decisions**: Student-friendly and officer-friendly explanations
+- **Feedback Learning**: Automatic weight adjustment based on success rates
+
+## 📊 Key Features
+
+### 1. **Realistic Indian Context**
+- 50 students with Indian names, realistic branches (CSE, IT, AI, ECE, ME)
+- 12 companies (MNCs, Startups, Product, Service) with varied hiring behaviors
+- 120 historical placement records with detailed outcomes
+
+### 2. **Resume Credibility System**
+- **30% students inflate skills** (claim advanced, provide no evidence)
+- Evidence validation (GitHub, projects, certifications, internships)
+- Resume trust scoring (0-1 scale)
+- Fake skill penalty in final scoring
+
+### 3. **Risk-Based Decision Making**
+- LOW/MEDIUM/HIGH risk classification
+- Based on historical failures of similar profiles
+- Communication score vs company benchmarks
+- Resume credibility analysis
+
+### 4. **Explainability First**
+```
+Student View: "Rejected - CGPA 6.8 < Required 7.5. Build DSA projects or target startups."
+Officer View: "Accepted but HIGH RISK - Similar profiles failed 3x, communication below avg."
+```
 
 ## 🏗️ Architecture
 
@@ -100,29 +142,64 @@ The dashboard will open at `http://localhost:8501`
 
 ## 🧮 Matching Algorithm
 
-### Formula
+### Enhanced Decision Formula
 
+```python
+# Step 1: Eligibility Gate (STRICT - NO EXCEPTIONS)
+if student.cgpa < company.min_cgpa → REJECT
+if student.active_backlogs > company.max_backlogs → REJECT
+
+# Step 2: Resume Credibility Check
+credibility_score = calculate_evidence(skills, github, projects, certs)
+if credibility_score < 0.3 → FLAG as "FAKE SKILL RISK"
+
+# Step 3: Match Score Calculation
+match_score = 
+  (skill_match × company.skill_weight)
++ (cgpa_normalized × company.gpa_weight)
++ (communication_score × company.communication_weight)
+- (fake_skill_penalty)
+
+# Step 4: Risk Assessment
+risk = assess_risk(historical_failures, credibility, communication)
+# Output: LOW / MEDIUM / HIGH
 ```
-Score = 0 if Hard Constraint Failed
-Score = (0.5 × Must_Have_Match) + (0.3 × Good_To_Have_Match) + (0.2 × Proficiency_Depth)
+
+### Resume Credibility Formula
+```python
+credibility = (
+  (github_projects × 0.4) +
+  (certifications × 0.3) +
+  (internships × 0.3)
+) / total_claimed_skills
+
+Penalty:
+- Claim "advanced" with 0 evidence → -0.3
+- Claim "intermediate" with weak evidence → -0.15
 ```
 
-### Hard Constraints (Strict 0 if Failed)
-1. GPA ≥ Minimum Required
-2. Backlogs ≤ Maximum Allowed
-3. Experience ≥ Minimum Required
+### Risk Score Calculation
+```python
+risk_score = 0
 
-### Skill Matching
-- **Must-Have Skills**: 50% weight (critical for role)
-- **Good-To-Have Skills**: 30% weight (preferred but not mandatory)
-- **Proficiency Depth**: 20% weight (average proficiency of matched skills)
+# Historical pattern analysis
+similar_profile_failures = count_failures(branch, cgpa_range, skill_set)
+if similar_profile_failures > 2:
+    risk_score += 3  # HIGH risk
 
-### Proficiency Scoring (0-10 scale)
-- **8-10**: GitHub projects, certifications, production code
-- **6-9**: Internships, professional projects
-- **5-7**: University projects
-- **3-5**: Listed in resume without evidence
-- **0**: Not mentioned
+# Resume credibility
+if credibility < 0.4:
+    risk_score += 2  # Increased risk
+
+# Communication gap
+if communication < company_avg_communication:
+    risk_score += 1
+
+# Final classification
+if risk_score >= 4: return "HIGH"
+elif risk_score >= 2: return "MEDIUM"
+else: return "LOW"
+```
 
 ## 📁 Project Structure
 
