@@ -1,202 +1,290 @@
 [
   {
-    "id": "JOB_001",
-    "company_name": "Slack",
-    "role": "Software Engineer",
-    "must_have_skills": [
-      "Spring Boot",
-      "JavaScript",
-      "Python",
-      "Microservices"
-    ],
-    "good_to_have_skills": [
-      "Angular",
-      "C#",
-      "Node.js",
-      "Java"
-    ],
-    "min_gpa": 7.2,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.5,
-    "company_type": "Product"
-  },
-  {
-    "id": "JOB_002",
-    "company_name": "Atlassian",
-    "role": "Backend Developer",
-    "must_have_skills": [
-      "TypeScript",
-      "Spring Boot",
-      "Data Structures"
-    ],
-    "good_to_have_skills": [
-      "Vue.js",
-      "REST API",
-      "Angular",
-      "FastAPI"
-    ],
-    "min_gpa": 7.99,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.5,
-    "company_type": "Product"
-  },
-  {
-    "id": "JOB_003",
-    "company_name": "Slack",
-    "role": "Backend Developer",
-    "must_have_skills": [
-      "Git",
-      "TypeScript",
-      "C++"
-    ],
-    "good_to_have_skills": [
-      "Vue.js",
-      "Spring Boot",
-      "Django",
-      "GraphQL"
-    ],
-    "min_gpa": 7.46,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.5,
-    "company_type": "Product"
-  },
-  {
-    "id": "JOB_004",
-    "company_name": "TCS",
-    "role": "Frontend Developer",
-    "must_have_skills": [
-      "Spring Boot",
-      "TypeScript",
-      "FastAPI",
-      "Agile",
-      "Node.js"
-    ],
-    "good_to_have_skills": [
-      "Django",
-      "Git",
-      "GraphQL",
-      "Microservices"
-    ],
-    "min_gpa": 7.23,
-    "max_backlogs_allowed": 2,
-    "min_experience_years": 0.0,
-    "company_type": "Service"
-  },
-  {
-    "id": "JOB_005",
-    "company_name": "Infosys",
-    "role": "Backend Developer",
-    "must_have_skills": [
-      "Vue.js",
-      "Spring Boot",
-      "Data Structures",
-      "Django"
-    ],
-    "good_to_have_skills": [
-      "FastAPI",
-      "TypeScript"
-    ],
-    "min_gpa": 7.07,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.0,
-    "company_type": "Service"
-  },
-  {
-    "id": "JOB_006",
-    "company_name": "Atlassian",
+    "company_id": "C001",
+    "company_name": "Microsoft IDC",
+    "company_type": "MNC",
     "role": "Full Stack Developer",
-    "must_have_skills": [
-      "Git",
-      "FastAPI",
-      "Python",
-      "TypeScript"
-    ],
-    "good_to_have_skills": [
-      "Agile",
-      "Rust"
-    ],
-    "min_gpa": 7.5,
-    "max_backlogs_allowed": 1,
-    "min_experience_years": 0.0,
-    "company_type": "Product"
+    "eligibility_rules": {
+      "min_cgpa": 8.3,
+      "max_backlogs": 0,
+      "mandatory_skills": [
+        "DSA",
+        "Python"
+      ],
+      "preferred_skills": [
+        "AWS",
+        "Docker"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.48,
+      "skill_weight": 0.36,
+      "communication_weight": 0.16
+    },
+    "risk_tolerance": "low"
   },
   {
-    "id": "JOB_007",
-    "company_name": "SAP",
+    "company_id": "C002",
+    "company_name": "Google India",
+    "company_type": "MNC",
+    "role": "SDE-1",
+    "eligibility_rules": {
+      "min_cgpa": 7.8,
+      "max_backlogs": 0,
+      "mandatory_skills": [
+        "SQL",
+        "Java"
+      ],
+      "preferred_skills": [
+        "React",
+        "Docker"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.48,
+      "skill_weight": 0.31,
+      "communication_weight": 0.2
+    },
+    "risk_tolerance": "low"
+  },
+  {
+    "company_id": "C003",
+    "company_name": "Cisco India",
+    "company_type": "MNC",
+    "role": "SDE-1",
+    "eligibility_rules": {
+      "min_cgpa": 7.9,
+      "max_backlogs": 0,
+      "mandatory_skills": [
+        "Java",
+        "DSA"
+      ],
+      "preferred_skills": [
+        "Docker",
+        "Git"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.44,
+      "skill_weight": 0.39,
+      "communication_weight": 0.11
+    },
+    "risk_tolerance": "low"
+  },
+  {
+    "company_id": "C004",
+    "company_name": "Google India",
+    "company_type": "MNC",
+    "role": "Data Analyst",
+    "eligibility_rules": {
+      "min_cgpa": 7.8,
+      "max_backlogs": 0,
+      "mandatory_skills": [
+        "Python",
+        "SQL"
+      ],
+      "preferred_skills": [
+        "Docker",
+        "React"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.49,
+      "skill_weight": 0.35,
+      "communication_weight": 0.13
+    },
+    "risk_tolerance": "low"
+  },
+  {
+    "company_id": "C005",
+    "company_name": "Zerodha",
+    "company_type": "Startup",
+    "role": "Backend Developer",
+    "eligibility_rules": {
+      "min_cgpa": 6.1,
+      "max_backlogs": 2,
+      "mandatory_skills": [
+        "JavaScript",
+        "React"
+      ],
+      "preferred_skills": [
+        "AWS",
+        "Machine Learning"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.25,
+      "skill_weight": 0.52,
+      "communication_weight": 0.19
+    },
+    "risk_tolerance": "high"
+  },
+  {
+    "company_id": "C006",
+    "company_name": "CRED",
+    "company_type": "Startup",
+    "role": "Data Analyst",
+    "eligibility_rules": {
+      "min_cgpa": 6.3,
+      "max_backlogs": 2,
+      "mandatory_skills": [
+        "Python",
+        "DSA"
+      ],
+      "preferred_skills": [
+        "Machine Learning",
+        "Docker"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.29,
+      "skill_weight": 0.58,
+      "communication_weight": 0.13
+    },
+    "risk_tolerance": "high"
+  },
+  {
+    "company_id": "C007",
+    "company_name": "CRED",
+    "company_type": "Startup",
+    "role": "ML Engineer",
+    "eligibility_rules": {
+      "min_cgpa": 6.3,
+      "max_backlogs": 1,
+      "mandatory_skills": [
+        "DSA",
+        "React"
+      ],
+      "preferred_skills": [
+        "Docker",
+        "AWS"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.26,
+      "skill_weight": 0.53,
+      "communication_weight": 0.12
+    },
+    "risk_tolerance": "high"
+  },
+  {
+    "company_id": "C008",
+    "company_name": "VMware India",
+    "company_type": "Product",
+    "role": "ML Engineer",
+    "eligibility_rules": {
+      "min_cgpa": 7.1,
+      "max_backlogs": 0,
+      "mandatory_skills": [
+        "DSA",
+        "C++"
+      ],
+      "preferred_skills": [
+        "SQL",
+        "Git"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.35,
+      "skill_weight": 0.42,
+      "communication_weight": 0.26
+    },
+    "risk_tolerance": "medium"
+  },
+  {
+    "company_id": "C009",
+    "company_name": "Salesforce",
+    "company_type": "Product",
     "role": "Frontend Developer",
-    "must_have_skills": [
-      "C++",
-      "Vue.js",
-      "System Design",
-      "Agile"
-    ],
-    "good_to_have_skills": [
-      "FastAPI",
-      "Django",
-      "REST API",
-      "Java"
-    ],
-    "min_gpa": 7.84,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.5,
-    "company_type": "MNC"
+    "eligibility_rules": {
+      "min_cgpa": 7.4,
+      "max_backlogs": 1,
+      "mandatory_skills": [
+        "C++",
+        "DSA"
+      ],
+      "preferred_skills": [
+        "SQL",
+        "React"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.33,
+      "skill_weight": 0.45,
+      "communication_weight": 0.23
+    },
+    "risk_tolerance": "medium"
   },
   {
-    "id": "JOB_008",
-    "company_name": "Meta",
+    "company_id": "C010",
+    "company_name": "Atlassian",
+    "company_type": "Product",
+    "role": "Data Analyst",
+    "eligibility_rules": {
+      "min_cgpa": 7.0,
+      "max_backlogs": 1,
+      "mandatory_skills": [
+        "C++",
+        "Java"
+      ],
+      "preferred_skills": [
+        "SQL",
+        "React"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.4,
+      "skill_weight": 0.49,
+      "communication_weight": 0.28
+    },
+    "risk_tolerance": "medium"
+  },
+  {
+    "company_id": "C011",
+    "company_name": "Accenture",
+    "company_type": "Service",
     "role": "Frontend Developer",
-    "must_have_skills": [
-      "JavaScript",
-      "Microservices",
-      "Data Structures"
-    ],
-    "good_to_have_skills": [
-      "TypeScript",
-      "Spring Boot",
-      "Rust"
-    ],
-    "min_gpa": 8.5,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.5,
-    "company_type": "MNC"
+    "eligibility_rules": {
+      "min_cgpa": 6.6,
+      "max_backlogs": 1,
+      "mandatory_skills": [
+        "Python",
+        "SQL"
+      ],
+      "preferred_skills": [
+        "Angular",
+        "DSA"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.3,
+      "skill_weight": 0.4,
+      "communication_weight": 0.3
+    },
+    "risk_tolerance": "medium"
   },
   {
-    "id": "JOB_009",
-    "company_name": "TCS",
+    "company_id": "C012",
+    "company_name": "Cognizant",
+    "company_type": "Service",
     "role": "Software Engineer",
-    "must_have_skills": [
-      "Node.js",
-      "Flask",
-      "TypeScript",
-      "C#"
-    ],
-    "good_to_have_skills": [
-      "Microservices",
-      "Agile",
-      "Rust"
-    ],
-    "min_gpa": 6.82,
-    "max_backlogs_allowed": 0,
-    "min_experience_years": 0.0,
-    "company_type": "Service"
-  },
-  {
-    "id": "JOB_010",
-    "company_name": "DataFusion",
-    "role": "Data Scientist",
-    "must_have_skills": [
-      "TensorFlow",
-      "TypeScript",
-      "C#"
-    ],
-    "good_to_have_skills": [
-      "Machine Learning",
-      "PostgreSQL",
-      "Computer Vision"
-    ],
-    "min_gpa": 6.61,
-    "max_backlogs_allowed": 1,
-    "min_experience_years": 0.6,
-    "company_type": "Startup"
+    "eligibility_rules": {
+      "min_cgpa": 6.5,
+      "max_backlogs": 2,
+      "mandatory_skills": [
+        "SQL",
+        "Python"
+      ],
+      "preferred_skills": [
+        "React",
+        "DSA"
+      ]
+    },
+    "weight_policy": {
+      "gpa_weight": 0.3,
+      "skill_weight": 0.4,
+      "communication_weight": 0.3
+    },
+    "risk_tolerance": "medium"
   }
 ]

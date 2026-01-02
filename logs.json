@@ -1,452 +1,1082 @@
 [
   {
-    "log_id": "LOG_0001",
-    "student_id": "STU_009",
-    "company_id": "JOB_001",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-06-05T19:06:27",
-    "student_score": 1.25
+    "log_id": "LOG0001",
+    "student_id": "S038",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-10-29T19:12:17"
   },
   {
-    "log_id": "LOG_0002",
-    "student_id": "STU_029",
-    "company_id": "JOB_008",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/3 matched",
-    "timestamp": "2025-10-07T10:26:25",
-    "student_score": 1.67
+    "log_id": "LOG0002",
+    "student_id": "S004",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-08T17:43:15"
   },
   {
-    "log_id": "LOG_0003",
-    "student_id": "STU_029",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-03-20T18:35:16",
-    "student_score": 0.0
+    "log_id": "LOG0003",
+    "student_id": "S019",
+    "company_id": "C008",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-04T16:05:14"
   },
   {
-    "log_id": "LOG_0004",
-    "student_id": "STU_022",
-    "company_id": "JOB_009",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.48 < Required 6.82",
-    "timestamp": "2025-02-01T06:21:31",
-    "student_score": 0.0
+    "log_id": "LOG0004",
+    "student_id": "S039",
+    "company_id": "C011",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-21T14:55:15"
   },
   {
-    "log_id": "LOG_0005",
-    "student_id": "STU_006",
-    "company_id": "JOB_002",
-    "status": "Hired",
-    "reason": "Strong match: 2/3 must-haves, GPA: 8.53",
-    "timestamp": "2025-08-20T16:46:20",
-    "student_score": 8.76
+    "log_id": "LOG0005",
+    "student_id": "S044",
+    "company_id": "C008",
+    "shortlisted": true,
+    "interview_result": "no_show",
+    "failure_reason": null,
+    "timestamp": "2025-11-19T03:24:54"
   },
   {
-    "log_id": "LOG_0006",
-    "student_id": "STU_021",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.64 < Required 7.84",
-    "timestamp": "2025-09-27T23:00:47",
-    "student_score": 0.0
+    "log_id": "LOG0006",
+    "student_id": "S007",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-01-03T05:15:54"
   },
   {
-    "log_id": "LOG_0007",
-    "student_id": "STU_023",
-    "company_id": "JOB_005",
-    "status": "Hired",
-    "reason": "Strong match: 2/4 must-haves, GPA: 9.86",
-    "timestamp": "2025-11-21T07:30:32",
-    "student_score": 10.0
+    "log_id": "LOG0007",
+    "student_id": "S009",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-09-15T04:22:31"
   },
   {
-    "log_id": "LOG_0008",
-    "student_id": "STU_028",
-    "company_id": "JOB_008",
-    "status": "Rejected",
-    "reason": "Hard Constraint: Experience 0.0y < Required 0.5y",
-    "timestamp": "2025-09-03T08:20:35",
-    "student_score": 0.0
+    "log_id": "LOG0008",
+    "student_id": "S024",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-06T09:37:43"
   },
   {
-    "log_id": "LOG_0009",
-    "student_id": "STU_004",
-    "company_id": "JOB_004",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.25 < Required 7.23",
-    "timestamp": "2025-04-07T01:32:26",
-    "student_score": 0.0
+    "log_id": "LOG0009",
+    "student_id": "S026",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-01T11:52:30"
   },
   {
-    "log_id": "LOG_0010",
-    "student_id": "STU_013",
-    "company_id": "JOB_010",
-    "status": "Rejected",
-    "reason": "Hard Constraint: Experience 0.4y < Required 0.6y",
-    "timestamp": "2025-02-11T07:48:33",
-    "student_score": 0.0
+    "log_id": "LOG0010",
+    "student_id": "S037",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-01T04:28:04"
   },
   {
-    "log_id": "LOG_0011",
-    "student_id": "STU_012",
-    "company_id": "JOB_010",
-    "status": "Rejected",
-    "reason": "Hard Constraint: Experience 0.1y < Required 0.6y",
-    "timestamp": "2025-09-30T12:19:48",
-    "student_score": 0.0
+    "log_id": "LOG0011",
+    "student_id": "S013",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-06-12T06:16:58"
   },
   {
-    "log_id": "LOG_0012",
-    "student_id": "STU_010",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-10-29T18:03:50",
-    "student_score": 0.0
+    "log_id": "LOG0012",
+    "student_id": "S036",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-01-23T19:45:18"
   },
   {
-    "log_id": "LOG_0013",
-    "student_id": "STU_001",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-04-29T20:58:28",
-    "student_score": 0.0
+    "log_id": "LOG0013",
+    "student_id": "S049",
+    "company_id": "C009",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-03-16T14:55:56"
   },
   {
-    "log_id": "LOG_0014",
-    "student_id": "STU_009",
-    "company_id": "JOB_001",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-11-28T23:19:39",
-    "student_score": 1.25
+    "log_id": "LOG0014",
+    "student_id": "S044",
+    "company_id": "C010",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-07-23T02:44:30"
   },
   {
-    "log_id": "LOG_0015",
-    "student_id": "STU_019",
-    "company_id": "JOB_001",
-    "status": "Rejected",
-    "reason": "Better candidates in pool",
-    "timestamp": "2025-09-25T11:46:36",
-    "student_score": 6.55
+    "log_id": "LOG0015",
+    "student_id": "S026",
+    "company_id": "C006",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-05-23T06:33:51"
   },
   {
-    "log_id": "LOG_0016",
-    "student_id": "STU_008",
-    "company_id": "JOB_010",
-    "status": "Rejected",
-    "reason": "Hard Constraint: Experience 0.2y < Required 0.6y",
-    "timestamp": "2025-08-23T22:15:43",
-    "student_score": 0.0
+    "log_id": "LOG0016",
+    "student_id": "S024",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-09-01T13:54:16"
   },
   {
-    "log_id": "LOG_0017",
-    "student_id": "STU_026",
-    "company_id": "JOB_006",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-11-11T14:05:06",
-    "student_score": 1.25
+    "log_id": "LOG0017",
+    "student_id": "S013",
+    "company_id": "C010",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-10-23T13:05:51"
   },
   {
-    "log_id": "LOG_0018",
-    "student_id": "STU_008",
-    "company_id": "JOB_004",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/5 matched",
-    "timestamp": "2025-02-18T18:20:06",
-    "student_score": 1.0
+    "log_id": "LOG0018",
+    "student_id": "S033",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-15T08:49:43"
   },
   {
-    "log_id": "LOG_0019",
-    "student_id": "STU_020",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-11-07T23:23:44",
-    "student_score": 1.25
+    "log_id": "LOG0019",
+    "student_id": "S033",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-09-02T15:46:06"
   },
   {
-    "log_id": "LOG_0020",
-    "student_id": "STU_022",
-    "company_id": "JOB_003",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.48 < Required 7.46",
-    "timestamp": "2025-08-10T12:53:38",
-    "student_score": 0.0
+    "log_id": "LOG0020",
+    "student_id": "S003",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-23T10:39:24"
   },
   {
-    "log_id": "LOG_0021",
-    "student_id": "STU_021",
-    "company_id": "JOB_002",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.64 < Required 7.99",
-    "timestamp": "2025-11-02T16:42:37",
-    "student_score": 0.0
+    "log_id": "LOG0021",
+    "student_id": "S009",
+    "company_id": "C012",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-10-24T22:09:41"
   },
   {
-    "log_id": "LOG_0022",
-    "student_id": "STU_029",
-    "company_id": "JOB_001",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-01-18T16:48:44",
-    "student_score": 1.25
+    "log_id": "LOG0022",
+    "student_id": "S030",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-01-22T19:35:34"
   },
   {
-    "log_id": "LOG_0023",
-    "student_id": "STU_010",
-    "company_id": "JOB_008",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 8.38 < Required 8.5",
-    "timestamp": "2025-05-17T14:11:38",
-    "student_score": 0.0
+    "log_id": "LOG0023",
+    "student_id": "S039",
+    "company_id": "C009",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-03-22T19:50:12"
   },
   {
-    "log_id": "LOG_0024",
-    "student_id": "STU_002",
-    "company_id": "JOB_010",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/3 matched",
-    "timestamp": "2025-07-28T15:33:57",
-    "student_score": 0.0
+    "log_id": "LOG0024",
+    "student_id": "S021",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-16T11:40:51"
   },
   {
-    "log_id": "LOG_0025",
-    "student_id": "STU_012",
-    "company_id": "JOB_003",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.82 < Required 7.46",
-    "timestamp": "2025-06-18T02:47:33",
-    "student_score": 0.0
+    "log_id": "LOG0025",
+    "student_id": "S026",
+    "company_id": "C010",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-08-04T01:38:04"
   },
   {
-    "log_id": "LOG_0026",
-    "student_id": "STU_003",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-09-16T15:50:45",
-    "student_score": 0.0
+    "log_id": "LOG0026",
+    "student_id": "S048",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-02-22T15:40:05"
   },
   {
-    "log_id": "LOG_0027",
-    "student_id": "STU_011",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.47 < Required 7.84",
-    "timestamp": "2025-05-26T15:59:28",
-    "student_score": 0.0
+    "log_id": "LOG0027",
+    "student_id": "S033",
+    "company_id": "C009",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-12-29T01:04:23"
   },
   {
-    "log_id": "LOG_0028",
-    "student_id": "STU_006",
-    "company_id": "JOB_004",
-    "status": "Rejected",
-    "reason": "Better candidates in pool",
-    "timestamp": "2025-01-29T12:44:37",
-    "student_score": 6.06
+    "log_id": "LOG0028",
+    "student_id": "S031",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-24T15:09:45"
   },
   {
-    "log_id": "LOG_0029",
-    "student_id": "STU_030",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-07-18T05:54:59",
-    "student_score": 0.0
+    "log_id": "LOG0029",
+    "student_id": "S024",
+    "company_id": "C006",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-06-21T22:04:27"
   },
   {
-    "log_id": "LOG_0030",
-    "student_id": "STU_027",
-    "company_id": "JOB_003",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.37 < Required 7.46",
-    "timestamp": "2025-09-11T05:33:39",
-    "student_score": 0.0
+    "log_id": "LOG0030",
+    "student_id": "S038",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-10T20:37:18"
   },
   {
-    "log_id": "LOG_0031",
-    "student_id": "STU_009",
-    "company_id": "JOB_008",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.73 < Required 8.5",
-    "timestamp": "2025-05-15T06:31:31",
-    "student_score": 0.0
+    "log_id": "LOG0031",
+    "student_id": "S047",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-09-30T22:41:54"
   },
   {
-    "log_id": "LOG_0032",
-    "student_id": "STU_026",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-01-07T15:56:48",
-    "student_score": 0.0
+    "log_id": "LOG0032",
+    "student_id": "S041",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-10T00:22:40"
   },
   {
-    "log_id": "LOG_0033",
-    "student_id": "STU_024",
-    "company_id": "JOB_006",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 5.87 < Required 7.5",
-    "timestamp": "2025-11-28T16:38:20",
-    "student_score": 0.0
+    "log_id": "LOG0033",
+    "student_id": "S039",
+    "company_id": "C008",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-02-18T22:18:34"
   },
   {
-    "log_id": "LOG_0034",
-    "student_id": "STU_026",
-    "company_id": "JOB_002",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/3 matched",
-    "timestamp": "2025-06-14T21:15:05",
-    "student_score": 0.0
+    "log_id": "LOG0034",
+    "student_id": "S050",
+    "company_id": "C010",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-01-13T23:37:08"
   },
   {
-    "log_id": "LOG_0035",
-    "student_id": "STU_015",
-    "company_id": "JOB_002",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.33 < Required 7.99",
-    "timestamp": "2025-11-18T02:41:59",
-    "student_score": 0.0
+    "log_id": "LOG0035",
+    "student_id": "S037",
+    "company_id": "C004",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-09-04T10:46:10"
   },
   {
-    "log_id": "LOG_0036",
-    "student_id": "STU_005",
-    "company_id": "JOB_004",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.17 < Required 7.23",
-    "timestamp": "2025-07-12T03:01:52",
-    "student_score": 0.0
+    "log_id": "LOG0036",
+    "student_id": "S011",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-27T05:37:53"
   },
   {
-    "log_id": "LOG_0037",
-    "student_id": "STU_028",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Hard Constraint: Experience 0.0y < Required 0.5y",
-    "timestamp": "2025-02-12T17:42:49",
-    "student_score": 0.0
+    "log_id": "LOG0037",
+    "student_id": "S041",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-11-09T04:40:49"
   },
   {
-    "log_id": "LOG_0038",
-    "student_id": "STU_028",
-    "company_id": "JOB_009",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-06-20T02:45:04",
-    "student_score": 0.0
+    "log_id": "LOG0038",
+    "student_id": "S040",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-04-05T16:57:01"
   },
   {
-    "log_id": "LOG_0039",
-    "student_id": "STU_012",
-    "company_id": "JOB_002",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.82 < Required 7.99",
-    "timestamp": "2025-05-23T09:51:26",
-    "student_score": 0.0
+    "log_id": "LOG0039",
+    "student_id": "S010",
+    "company_id": "C011",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-10-05T10:11:30"
   },
   {
-    "log_id": "LOG_0040",
-    "student_id": "STU_026",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-09-06T14:06:10",
-    "student_score": 0.0
+    "log_id": "LOG0040",
+    "student_id": "S016",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-03-05T06:43:40"
   },
   {
-    "log_id": "LOG_0041",
-    "student_id": "STU_001",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/4 matched",
-    "timestamp": "2025-12-15T00:06:06",
-    "student_score": 1.25
+    "log_id": "LOG0041",
+    "student_id": "S037",
+    "company_id": "C012",
+    "shortlisted": true,
+    "interview_result": "no_show",
+    "failure_reason": null,
+    "timestamp": "2025-05-03T10:56:15"
   },
   {
-    "log_id": "LOG_0042",
-    "student_id": "STU_018",
-    "company_id": "JOB_002",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 1/3 matched",
-    "timestamp": "2025-11-20T14:07:56",
-    "student_score": 1.67
+    "log_id": "LOG0042",
+    "student_id": "S021",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-04T16:43:41"
   },
   {
-    "log_id": "LOG_0043",
-    "student_id": "STU_015",
-    "company_id": "JOB_006",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.33 < Required 7.5",
-    "timestamp": "2025-06-30T07:06:05",
-    "student_score": 0.0
+    "log_id": "LOG0043",
+    "student_id": "S010",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-01-08T01:59:29"
   },
   {
-    "log_id": "LOG_0044",
-    "student_id": "STU_022",
-    "company_id": "JOB_005",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.48 < Required 7.07",
-    "timestamp": "2025-10-04T10:36:52",
-    "student_score": 0.0
+    "log_id": "LOG0044",
+    "student_id": "S045",
+    "company_id": "C004",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-05T05:53:33"
   },
   {
-    "log_id": "LOG_0045",
-    "student_id": "STU_019",
-    "company_id": "JOB_007",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.82 < Required 7.84",
-    "timestamp": "2025-03-03T04:00:04",
-    "student_score": 0.0
+    "log_id": "LOG0045",
+    "student_id": "S027",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-10T05:17:06"
   },
   {
-    "log_id": "LOG_0046",
-    "student_id": "STU_027",
-    "company_id": "JOB_006",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 7.37 < Required 7.5",
-    "timestamp": "2025-06-20T21:03:16",
-    "student_score": 0.0
+    "log_id": "LOG0046",
+    "student_id": "S050",
+    "company_id": "C010",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-02-07T23:18:32"
   },
   {
-    "log_id": "LOG_0047",
-    "student_id": "STU_004",
-    "company_id": "JOB_004",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.25 < Required 7.23",
-    "timestamp": "2025-03-12T03:44:08",
-    "student_score": 0.0
+    "log_id": "LOG0047",
+    "student_id": "S031",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-03-31T00:53:53"
   },
   {
-    "log_id": "LOG_0048",
-    "student_id": "STU_016",
-    "company_id": "JOB_001",
-    "status": "Rejected",
-    "reason": "Hard Constraint: GPA 6.39 < Required 7.2",
-    "timestamp": "2025-10-14T17:29:17",
-    "student_score": 0.0
+    "log_id": "LOG0048",
+    "student_id": "S047",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-11-25T13:00:20"
   },
   {
-    "log_id": "LOG_0049",
-    "student_id": "STU_020",
-    "company_id": "JOB_009",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/4 matched",
-    "timestamp": "2025-07-24T09:03:08",
-    "student_score": 0.0
+    "log_id": "LOG0049",
+    "student_id": "S046",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-12-23T07:39:34"
   },
   {
-    "log_id": "LOG_0050",
-    "student_id": "STU_011",
-    "company_id": "JOB_010",
-    "status": "Rejected",
-    "reason": "Insufficient Must-Have Skills: 0/3 matched",
-    "timestamp": "2025-09-12T08:43:22",
-    "student_score": 0.0
+    "log_id": "LOG0050",
+    "student_id": "S034",
+    "company_id": "C004",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-02-15T20:04:14"
+  },
+  {
+    "log_id": "LOG0051",
+    "student_id": "S036",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-06-30T23:32:32"
+  },
+  {
+    "log_id": "LOG0052",
+    "student_id": "S043",
+    "company_id": "C008",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-02-17T09:24:00"
+  },
+  {
+    "log_id": "LOG0053",
+    "student_id": "S012",
+    "company_id": "C008",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-09-11T07:37:41"
+  },
+  {
+    "log_id": "LOG0054",
+    "student_id": "S035",
+    "company_id": "C006",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-11-21T22:40:22"
+  },
+  {
+    "log_id": "LOG0055",
+    "student_id": "S047",
+    "company_id": "C011",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-03-03T13:39:04"
+  },
+  {
+    "log_id": "LOG0056",
+    "student_id": "S042",
+    "company_id": "C012",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-07-15T07:43:57"
+  },
+  {
+    "log_id": "LOG0057",
+    "student_id": "S016",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-12-30T23:29:34"
+  },
+  {
+    "log_id": "LOG0058",
+    "student_id": "S036",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-10-08T01:45:48"
+  },
+  {
+    "log_id": "LOG0059",
+    "student_id": "S020",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-04-26T02:52:59"
+  },
+  {
+    "log_id": "LOG0060",
+    "student_id": "S046",
+    "company_id": "C004",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-07-19T09:34:02"
+  },
+  {
+    "log_id": "LOG0061",
+    "student_id": "S031",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-10-03T17:26:57"
+  },
+  {
+    "log_id": "LOG0062",
+    "student_id": "S036",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-04-18T23:02:28"
+  },
+  {
+    "log_id": "LOG0063",
+    "student_id": "S018",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-06-13T03:11:13"
+  },
+  {
+    "log_id": "LOG0064",
+    "student_id": "S025",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-11-22T22:43:38"
+  },
+  {
+    "log_id": "LOG0065",
+    "student_id": "S023",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-09T03:45:30"
+  },
+  {
+    "log_id": "LOG0066",
+    "student_id": "S019",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-07-05T03:56:37"
+  },
+  {
+    "log_id": "LOG0067",
+    "student_id": "S019",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-04-07T10:16:23"
+  },
+  {
+    "log_id": "LOG0068",
+    "student_id": "S006",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-06-29T04:05:41"
+  },
+  {
+    "log_id": "LOG0069",
+    "student_id": "S029",
+    "company_id": "C011",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-08-04T20:41:57"
+  },
+  {
+    "log_id": "LOG0070",
+    "student_id": "S017",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-02-27T22:41:50"
+  },
+  {
+    "log_id": "LOG0071",
+    "student_id": "S031",
+    "company_id": "C004",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-05-31T17:49:01"
+  },
+  {
+    "log_id": "LOG0072",
+    "student_id": "S013",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-03-17T19:09:13"
+  },
+  {
+    "log_id": "LOG0073",
+    "student_id": "S018",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-26T18:58:13"
+  },
+  {
+    "log_id": "LOG0074",
+    "student_id": "S045",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-08-23T13:08:25"
+  },
+  {
+    "log_id": "LOG0075",
+    "student_id": "S009",
+    "company_id": "C002",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-07-19T03:41:05"
+  },
+  {
+    "log_id": "LOG0076",
+    "student_id": "S040",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-10-19T14:29:13"
+  },
+  {
+    "log_id": "LOG0077",
+    "student_id": "S038",
+    "company_id": "C004",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-10T06:27:04"
+  },
+  {
+    "log_id": "LOG0078",
+    "student_id": "S016",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-02-24T18:53:10"
+  },
+  {
+    "log_id": "LOG0079",
+    "student_id": "S043",
+    "company_id": "C009",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-12-04T07:51:04"
+  },
+  {
+    "log_id": "LOG0080",
+    "student_id": "S007",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-01-29T21:12:48"
+  },
+  {
+    "log_id": "LOG0081",
+    "student_id": "S022",
+    "company_id": "C012",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-20T01:20:55"
+  },
+  {
+    "log_id": "LOG0082",
+    "student_id": "S031",
+    "company_id": "C002",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-10-29T20:23:26"
+  },
+  {
+    "log_id": "LOG0083",
+    "student_id": "S044",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-11-05T13:55:39"
+  },
+  {
+    "log_id": "LOG0084",
+    "student_id": "S001",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-11-30T14:14:13"
+  },
+  {
+    "log_id": "LOG0085",
+    "student_id": "S011",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-12T22:04:48"
+  },
+  {
+    "log_id": "LOG0086",
+    "student_id": "S042",
+    "company_id": "C008",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-05-14T18:24:11"
+  },
+  {
+    "log_id": "LOG0087",
+    "student_id": "S031",
+    "company_id": "C011",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-31T14:21:45"
+  },
+  {
+    "log_id": "LOG0088",
+    "student_id": "S013",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-11-04T16:35:41"
+  },
+  {
+    "log_id": "LOG0089",
+    "student_id": "S021",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-07-18T22:59:40"
+  },
+  {
+    "log_id": "LOG0090",
+    "student_id": "S042",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-16T12:45:57"
+  },
+  {
+    "log_id": "LOG0091",
+    "student_id": "S050",
+    "company_id": "C002",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-11-17T10:36:42"
+  },
+  {
+    "log_id": "LOG0092",
+    "student_id": "S042",
+    "company_id": "C010",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-01-03T18:26:46"
+  },
+  {
+    "log_id": "LOG0093",
+    "student_id": "S003",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-22T14:47:12"
+  },
+  {
+    "log_id": "LOG0094",
+    "student_id": "S027",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-10-11T17:49:19"
+  },
+  {
+    "log_id": "LOG0095",
+    "student_id": "S003",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-28T17:16:42"
+  },
+  {
+    "log_id": "LOG0096",
+    "student_id": "S032",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-11-24T00:22:39"
+  },
+  {
+    "log_id": "LOG0097",
+    "student_id": "S048",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "no_show",
+    "failure_reason": null,
+    "timestamp": "2025-08-18T17:11:32"
+  },
+  {
+    "log_id": "LOG0098",
+    "student_id": "S037",
+    "company_id": "C010",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-08-15T23:48:50"
+  },
+  {
+    "log_id": "LOG0099",
+    "student_id": "S007",
+    "company_id": "C006",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-09-16T01:37:48"
+  },
+  {
+    "log_id": "LOG0100",
+    "student_id": "S035",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-07-11T22:18:54"
+  },
+  {
+    "log_id": "LOG0101",
+    "student_id": "S032",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-04T19:20:58"
+  },
+  {
+    "log_id": "LOG0102",
+    "student_id": "S033",
+    "company_id": "C008",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-03-01T11:32:45"
+  },
+  {
+    "log_id": "LOG0103",
+    "student_id": "S022",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-25T04:39:35"
+  },
+  {
+    "log_id": "LOG0104",
+    "student_id": "S047",
+    "company_id": "C008",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-07-30T22:28:16"
+  },
+  {
+    "log_id": "LOG0105",
+    "student_id": "S042",
+    "company_id": "C005",
+    "shortlisted": true,
+    "interview_result": "no_show",
+    "failure_reason": null,
+    "timestamp": "2025-07-09T20:55:31"
+  },
+  {
+    "log_id": "LOG0106",
+    "student_id": "S022",
+    "company_id": "C005",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-05-16T19:19:28"
+  },
+  {
+    "log_id": "LOG0107",
+    "student_id": "S037",
+    "company_id": "C011",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-05-11T21:06:04"
+  },
+  {
+    "log_id": "LOG0108",
+    "student_id": "S041",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "low_dsa",
+    "timestamp": "2025-08-05T02:46:46"
+  },
+  {
+    "log_id": "LOG0109",
+    "student_id": "S028",
+    "company_id": "C009",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-10-26T01:01:30"
+  },
+  {
+    "log_id": "LOG0110",
+    "student_id": "S021",
+    "company_id": "C002",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-01T19:40:18"
+  },
+  {
+    "log_id": "LOG0111",
+    "student_id": "S026",
+    "company_id": "C011",
+    "shortlisted": true,
+    "interview_result": "selected",
+    "failure_reason": null,
+    "timestamp": "2025-05-29T06:23:20"
+  },
+  {
+    "log_id": "LOG0112",
+    "student_id": "S031",
+    "company_id": "C006",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-06-28T14:39:20"
+  },
+  {
+    "log_id": "LOG0113",
+    "student_id": "S016",
+    "company_id": "C001",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-12-31T01:20:58"
+  },
+  {
+    "log_id": "LOG0114",
+    "student_id": "S017",
+    "company_id": "C007",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-05-07T17:43:07"
+  },
+  {
+    "log_id": "LOG0115",
+    "student_id": "S016",
+    "company_id": "C008",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-12-06T11:48:41"
+  },
+  {
+    "log_id": "LOG0116",
+    "student_id": "S020",
+    "company_id": "C010",
+    "shortlisted": true,
+    "interview_result": "no_show",
+    "failure_reason": null,
+    "timestamp": "2025-03-17T00:54:14"
+  },
+  {
+    "log_id": "LOG0117",
+    "student_id": "S042",
+    "company_id": "C006",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "poor_communication",
+    "timestamp": "2025-09-30T15:41:34"
+  },
+  {
+    "log_id": "LOG0118",
+    "student_id": "S008",
+    "company_id": "C008",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-04-05T12:21:55"
+  },
+  {
+    "log_id": "LOG0119",
+    "student_id": "S020",
+    "company_id": "C003",
+    "shortlisted": false,
+    "interview_result": "rejected",
+    "failure_reason": "cgpa",
+    "timestamp": "2025-08-12T20:04:36"
+  },
+  {
+    "log_id": "LOG0120",
+    "student_id": "S026",
+    "company_id": "C011",
+    "shortlisted": true,
+    "interview_result": "rejected",
+    "failure_reason": "fake_skill",
+    "timestamp": "2025-05-31T12:05:00"
   }
 ]

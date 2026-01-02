@@ -1,1502 +1,3422 @@
 [
   {
-    "id": "STU_001",
-    "name": "Allison Hill",
-    "gpa": 7.88,
-    "backlogs": 0,
+    "student_id": "S001",
+    "name": "Aryan Maharaj",
+    "branch": "IT",
+    "cgpa": 9.28,
+    "active_backlogs": 0,
     "skills": [
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 5.9,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "MongoDB",
-        "proficiency_score": 7.1,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Angular",
-        "proficiency_score": 5.7,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Flask",
-        "proficiency_score": 6.8,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Data Structures",
-        "proficiency_score": 5.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Rust",
-        "proficiency_score": 5.2,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.7,
-    "email": "donaldgarcia@example.net",
-    "phone": "+1-219-560-0133"
-  },
-  {
-    "id": "STU_002",
-    "name": "Meredith Barnes",
-    "gpa": 7.44,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "C++",
-        "proficiency_score": 6.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Microservices",
-        "proficiency_score": 6.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "FastAPI",
-        "proficiency_score": 5.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "PostgreSQL",
-        "proficiency_score": 5.5,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Go",
-        "proficiency_score": 6.8,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 6.6,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 0.7,
-    "email": "zlawrence@example.org",
-    "phone": "001-626-254-2351x16155"
-  },
-  {
-    "id": "STU_003",
-    "name": "Kimberly Dudley",
-    "gpa": 7.91,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 5.6,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "MongoDB",
-        "proficiency_score": 7.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "REST API",
-        "proficiency_score": 5.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 7.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "FastAPI",
-        "proficiency_score": 7.2,
-        "evidence_source": "Listed in Resume"
-      },
       {
         "name": "NumPy",
-        "proficiency_score": 5.5,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.2,
-    "email": "smiller@example.net",
-    "phone": "+1-659-931-0341x316"
-  },
-  {
-    "id": "STU_004",
-    "name": "Holly Wood",
-    "gpa": 6.25,
-    "backlogs": 3,
-    "skills": [
-      {
-        "name": "React",
-        "proficiency_score": 3.7,
-        "evidence_source": "University Project"
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 1,
+          "internship": true
+        }
       },
       {
-        "name": "Spring Boot",
-        "proficiency_score": 4.5,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 5.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Docker",
-        "proficiency_score": 3.5,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 5.4,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "CI/CD",
-        "proficiency_score": 4.8,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 4.1,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 4.6,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Deep Learning",
-        "proficiency_score": 5.0,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 0.1,
-    "email": "elizabethmiles@example.net",
-    "phone": "+1-219-528-3276x4835"
-  },
-  {
-    "id": "STU_005",
-    "name": "Renee Morales",
-    "gpa": 7.17,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "PyTorch",
-        "proficiency_score": 7.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Vue.js",
-        "proficiency_score": 5.7,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "NLP",
-        "proficiency_score": 6.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 5.4,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 6.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Azure",
-        "proficiency_score": 7.3,
-        "evidence_source": "Listed in Resume"
+        "name": "MongoDB",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
       },
       {
         "name": "Node.js",
-        "proficiency_score": 5.8,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 0.1,
-    "email": "clarksherri@example.net",
-    "phone": "837-767-2423x88496"
-  },
-  {
-    "id": "STU_006",
-    "name": "Zachary Hicks",
-    "gpa": 8.53,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Pandas",
-        "proficiency_score": 7.8,
-        "evidence_source": "Internship"
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 1,
+          "internship": false
+        }
       },
       {
-        "name": "Spring Boot",
-        "proficiency_score": 9.9,
-        "evidence_source": "Hackathon"
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 3,
+          "internship": false
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 3,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 10,
+    "resume_trust_score": 0.81,
+    "email": "udantdewan@example.net",
+    "phone": "+918196001338"
+  },
+  {
+    "student_id": "S002",
+    "name": "Rushil Saini",
+    "branch": "AI",
+    "cgpa": 6.71,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.0,
+    "email": "saumyamall@example.org",
+    "phone": "+916542351161"
+  },
+  {
+    "student_id": "S003",
+    "name": "Hemangini Lalla",
+    "branch": "ME",
+    "cgpa": 5.63,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "Node.js",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.0,
+    "email": "sharafjeet@example.com",
+    "phone": "+918495931034"
+  },
+  {
+    "student_id": "S004",
+    "name": "Viraj Chaudhuri",
+    "branch": "CSE",
+    "cgpa": 7.89,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "AWS",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
       },
       {
         "name": "JavaScript",
-        "proficiency_score": 8.2,
-        "evidence_source": "Internship"
-      },
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.47,
+    "email": "dmall@example.net",
+    "phone": "02553419283"
+  },
+  {
+    "student_id": "S005",
+    "name": "Turvi Raghavan",
+    "branch": "AI",
+    "cgpa": 8.81,
+    "active_backlogs": 0,
+    "skills": [
       {
-        "name": "System Design",
-        "proficiency_score": 9.9,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 9.3,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Go",
-        "proficiency_score": 10.0,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 8.6,
-        "evidence_source": "Certification"
+        "name": "C++",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 1,
+          "internship": true
+        }
       },
       {
         "name": "AWS",
-        "proficiency_score": 7.8,
-        "evidence_source": "Hackathon"
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 2,
+          "internship": false
+        }
       },
       {
-        "name": "TypeScript",
-        "proficiency_score": 7.7,
-        "evidence_source": "Internship"
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
       },
       {
-        "name": "Docker",
-        "proficiency_score": 9.0,
-        "evidence_source": "GitHub Project"
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 1,
+          "internship": true
+        }
       }
     ],
-    "experience_years": 1.8,
-    "email": "camposmichelle@example.org",
-    "phone": "+1-326-691-6697x8480"
+    "communication_score": 7,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.76,
+    "email": "theodore50@example.org",
+    "phone": "+915641395376"
   },
   {
-    "id": "STU_007",
-    "name": "Gina Carter",
-    "gpa": 8.85,
-    "backlogs": 0,
+    "student_id": "S006",
+    "name": "Luke Lanka",
+    "branch": "ME",
+    "cgpa": 8.18,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Pandas",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Machine Learning",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.0,
+    "email": "yatinyohannan@example.com",
+    "phone": "9696532871"
+  },
+  {
+    "student_id": "S007",
+    "name": "Imaran Dua",
+    "branch": "ECE",
+    "cgpa": 9.7,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "AWS",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 5,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 5,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 3,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 10,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.78,
+    "email": "pahalbhatt@example.com",
+    "phone": "09784801845"
+  },
+  {
+    "student_id": "S008",
+    "name": "Chaaya Saran",
+    "branch": "ME",
+    "cgpa": 6.06,
+    "active_backlogs": 1,
     "skills": [
       {
         "name": "REST API",
-        "proficiency_score": 9.2,
-        "evidence_source": "Certification"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 4,
+    "resume_trust_score": 0.0,
+    "email": "sudikshaaggarwal@example.net",
+    "phone": "4828148932"
+  },
+  {
+    "student_id": "S009",
+    "name": "Neel Zacharia",
+    "branch": "AI",
+    "cgpa": 8.01,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Python",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
         "name": "JavaScript",
-        "proficiency_score": 8.8,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "FastAPI",
-        "proficiency_score": 8.1,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "TypeScript",
-        "proficiency_score": 9.5,
-        "evidence_source": "Hackathon"
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
         "name": "C++",
-        "proficiency_score": 7.7,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 8.4,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "GraphQL",
-        "proficiency_score": 8.7,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Azure",
-        "proficiency_score": 9.2,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 7.7,
-        "evidence_source": "GitHub Project"
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": true
+        }
       }
     ],
-    "experience_years": 0.0,
-    "email": "shawnmckay@example.net",
-    "phone": "282-781-4893x252"
+    "communication_score": 8,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.03,
+    "email": "naikvrinda@example.org",
+    "phone": "+915430391171"
   },
   {
-    "id": "STU_008",
-    "name": "Brian Cox DVM",
-    "gpa": 8.09,
-    "backlogs": 0,
+    "student_id": "S010",
+    "name": "Kabir Soman",
+    "branch": "ME",
+    "cgpa": 8.87,
+    "active_backlogs": 0,
     "skills": [
-      {
-        "name": "Docker",
-        "proficiency_score": 5.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 6.1,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "React",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 7.5,
-        "evidence_source": "Listed in Resume"
-      },
       {
         "name": "Node.js",
-        "proficiency_score": 7.4,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "MongoDB",
-        "proficiency_score": 5.4,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.2,
-    "email": "john39@example.org",
-    "phone": "671-882-2782"
-  },
-  {
-    "id": "STU_009",
-    "name": "Tanya Campos",
-    "gpa": 7.73,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Vue.js",
-        "proficiency_score": 7.4,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 6.7,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 5.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 5.5,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 6.4,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "NLP",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "PostgreSQL",
-        "proficiency_score": 5.1,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 6.2,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 0.9,
-    "email": "jenniferross@example.net",
-    "phone": "+1-557-587-1331x5098"
-  },
-  {
-    "id": "STU_010",
-    "name": "Michael Brown",
-    "gpa": 8.38,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Go",
-        "proficiency_score": 6.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Node.js",
-        "proficiency_score": 5.6,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "TypeScript",
-        "proficiency_score": 5.1,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Git",
-        "proficiency_score": 6.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 6.4,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 1.0,
-    "email": "whiteheadmichele@example.org",
-    "phone": "334.373.8299x73763"
-  },
-  {
-    "id": "STU_011",
-    "name": "Heather Jenkins",
-    "gpa": 7.47,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "NumPy",
-        "proficiency_score": 5.8,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 5.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 7.5,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Deep Learning",
-        "proficiency_score": 5.2,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "React",
-        "proficiency_score": 6.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 7.3,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.7,
-    "email": "nuneztracey@example.org",
-    "phone": "4658133387"
-  },
-  {
-    "id": "STU_012",
-    "name": "Joel Baxter",
-    "gpa": 6.82,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 5.8,
-        "evidence_source": "Listed in Resume"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 2,
+          "internship": true
+        }
       },
       {
         "name": "Docker",
-        "proficiency_score": 3.8,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 3.8,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "GCP",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 5.1,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 4.5,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Microservices",
-        "proficiency_score": 5.7,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.1,
-    "email": "ramosmichelle@example.net",
-    "phone": "908-501-3267"
-  },
-  {
-    "id": "STU_013",
-    "name": "Stephanie Martin",
-    "gpa": 6.77,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "C++",
-        "proficiency_score": 4.7,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 3.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 4.6,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "React",
-        "proficiency_score": 4.7,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "REST API",
-        "proficiency_score": 4.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 3.9,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Vue.js",
-        "proficiency_score": 5.7,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 5.0,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 4.1,
-        "evidence_source": "Listed in Resume"
-      }
-    ],
-    "experience_years": 0.4,
-    "email": "gallowayjoseph@example.com",
-    "phone": "268-272-3430x9805"
-  },
-  {
-    "id": "STU_014",
-    "name": "Kathryn Farrell",
-    "gpa": 7.84,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 7.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Vue.js",
-        "proficiency_score": 7.0,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Node.js",
-        "proficiency_score": 7.0,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "TensorFlow",
-        "proficiency_score": 5.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Java",
-        "proficiency_score": 5.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Microservices",
-        "proficiency_score": 7.1,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.9,
-    "email": "brianromero@example.org",
-    "phone": "291-336-1939"
-  },
-  {
-    "id": "STU_015",
-    "name": "Kevin Mills",
-    "gpa": 7.33,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "FastAPI",
-        "proficiency_score": 7.4,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Data Structures",
-        "proficiency_score": 5.9,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Java",
-        "proficiency_score": 6.0,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Django",
-        "proficiency_score": 5.8,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Deep Learning",
-        "proficiency_score": 5.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 5.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "MongoDB",
-        "proficiency_score": 5.1,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.3,
-    "email": "james53@example.com",
-    "phone": "(524)675-1079x9118"
-  },
-  {
-    "id": "STU_016",
-    "name": "Gregory Jones",
-    "gpa": 6.39,
-    "backlogs": 2,
-    "skills": [
-      {
-        "name": "Azure",
-        "proficiency_score": 4.6,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "C#",
-        "proficiency_score": 4.1,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 5.8,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 4.9,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Django",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 4.5,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "C++",
-        "proficiency_score": 4.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 4.7,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.2,
-    "email": "mikemoore@example.net",
-    "phone": "001-449-680-8412x411"
-  },
-  {
-    "id": "STU_017",
-    "name": "Daniel Cooper",
-    "gpa": 8.79,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Node.js",
-        "proficiency_score": 8.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 9.2,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 9.5,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 9.1,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Deep Learning",
-        "proficiency_score": 8.8,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 7.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 9.2,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "GraphQL",
-        "proficiency_score": 9.5,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "PostgreSQL",
-        "proficiency_score": 7.6,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Flask",
-        "proficiency_score": 10.0,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 8.6,
-        "evidence_source": "GitHub Project"
-      }
-    ],
-    "experience_years": 1.4,
-    "email": "william40@example.org",
-    "phone": "+1-264-300-5242x7868"
-  },
-  {
-    "id": "STU_018",
-    "name": "Stephen Mckee",
-    "gpa": 8.33,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 6.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Angular",
-        "proficiency_score": 6.4,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "GraphQL",
-        "proficiency_score": 6.1,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 6.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Rust",
-        "proficiency_score": 6.5,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 6.5,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "FastAPI",
-        "proficiency_score": 7.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Node.js",
-        "proficiency_score": 7.1,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.5,
-    "email": "davenportbrandi@example.org",
-    "phone": "(420)545-0533x15869"
-  },
-  {
-    "id": "STU_019",
-    "name": "Vanessa Cochran",
-    "gpa": 7.82,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 6.8,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "REST API",
-        "proficiency_score": 5.7,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "MongoDB",
-        "proficiency_score": 7.2,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "GCP",
-        "proficiency_score": 5.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "AWS",
-        "proficiency_score": 6.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Data Structures",
-        "proficiency_score": 6.8,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Microservices",
-        "proficiency_score": 6.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 6.4,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.5,
-    "email": "vjohnson@example.com",
-    "phone": "(534)221-6073x37543"
-  },
-  {
-    "id": "STU_020",
-    "name": "Jennifer Ramirez",
-    "gpa": 9.12,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 9.6,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "CI/CD",
-        "proficiency_score": 8.8,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Java",
-        "proficiency_score": 8.7,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 8.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Data Structures",
-        "proficiency_score": 8.5,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Computer Vision",
-        "proficiency_score": 9.3,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 9.8,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Tableau",
-        "proficiency_score": 9.8,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 7.7,
-        "evidence_source": "GitHub Project"
-      }
-    ],
-    "experience_years": 1.7,
-    "email": "rasmussenjoshua@example.net",
-    "phone": "768.750.1429x40196"
-  },
-  {
-    "id": "STU_021",
-    "name": "William Wilson",
-    "gpa": 7.64,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 5.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "NumPy",
-        "proficiency_score": 5.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Flask",
-        "proficiency_score": 6.2,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "NLP",
-        "proficiency_score": 6.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 5.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 7.0,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.1,
-    "email": "jonathanfletcher@example.org",
-    "phone": "783.856.1595x14846"
-  },
-  {
-    "id": "STU_022",
-    "name": "Kristen Lee",
-    "gpa": 6.48,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Java",
-        "proficiency_score": 4.4,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 5.3,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Angular",
-        "proficiency_score": 4.8,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 5.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "React",
-        "proficiency_score": 5.9,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Computer Vision",
-        "proficiency_score": 4.7,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "C#",
-        "proficiency_score": 4.7,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.1,
-    "email": "lbyrd@example.net",
-    "phone": "001-746-980-4436"
-  },
-  {
-    "id": "STU_023",
-    "name": "Michael Dixon",
-    "gpa": 9.86,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Django",
-        "proficiency_score": 9.2,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "TypeScript",
-        "proficiency_score": 8.8,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "CI/CD",
-        "proficiency_score": 7.5,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "REST API",
-        "proficiency_score": 9.6,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 8.6,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Rust",
-        "proficiency_score": 9.1,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 9.3,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "C#",
-        "proficiency_score": 7.9,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 9.0,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "C++",
-        "proficiency_score": 8.7,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Tableau",
-        "proficiency_score": 8.3,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 0.8,
-    "email": "donnacampbell@example.net",
-    "phone": "+1-395-913-4332x0037"
-  },
-  {
-    "id": "STU_024",
-    "name": "Mark Lee",
-    "gpa": 5.87,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 3.5,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "NLP",
-        "proficiency_score": 4.1,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 4.0,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Agile",
-        "proficiency_score": 4.7,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 3.3,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Apache Spark",
-        "proficiency_score": 4.5,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "Java",
-        "proficiency_score": 5.1,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "AWS",
-        "proficiency_score": 4.3,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.4,
-    "email": "psnyder@example.org",
-    "phone": "+1-401-963-2870x8317"
-  },
-  {
-    "id": "STU_025",
-    "name": "Victoria Larson",
-    "gpa": 8.53,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Data Structures",
-        "proficiency_score": 8.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency_score": 8.2,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 8.1,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "CI/CD",
-        "proficiency_score": 8.3,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Power BI",
-        "proficiency_score": 8.0,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Computer Vision",
-        "proficiency_score": 8.2,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 10.0,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "GCP",
-        "proficiency_score": 8.2,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Tableau",
-        "proficiency_score": 7.9,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 9.3,
-        "evidence_source": "GitHub Project"
-      }
-    ],
-    "experience_years": 0.4,
-    "email": "usalazar@example.net",
-    "phone": "(387)627-7434x87347"
-  },
-  {
-    "id": "STU_026",
-    "name": "George Orozco",
-    "gpa": 8.69,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Kubernetes",
-        "proficiency_score": 8.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "PostgreSQL",
-        "proficiency_score": 8.4,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "React",
-        "proficiency_score": 8.1,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "REST API",
-        "proficiency_score": 7.8,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "AWS",
-        "proficiency_score": 8.5,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Rust",
-        "proficiency_score": 8.9,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Python",
-        "proficiency_score": 7.9,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Terraform",
-        "proficiency_score": 7.7,
-        "evidence_source": "Certification"
-      }
-    ],
-    "experience_years": 1.9,
-    "email": "taylorjesse@example.net",
-    "phone": "(231)566-5876"
-  },
-  {
-    "id": "STU_027",
-    "name": "Jean Carrillo",
-    "gpa": 7.37,
-    "backlogs": 1,
-    "skills": [
-      {
-        "name": "Machine Learning",
-        "proficiency_score": 6.4,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 6.5,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 5.2,
-        "evidence_source": "Listed in Resume"
-      },
-      {
-        "name": "Pandas",
-        "proficiency_score": 6.6,
-        "evidence_source": "University Project"
-      },
-      {
-        "name": "CI/CD",
-        "proficiency_score": 6.7,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 5.6,
-        "evidence_source": "University Project"
-      }
-    ],
-    "experience_years": 0.8,
-    "email": "gateskathy@example.com",
-    "phone": "805.946.6889x3734"
-  },
-  {
-    "id": "STU_028",
-    "name": "George Shelton",
-    "gpa": 9.33,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 9.2,
-        "evidence_source": "GitHub Project"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 3,
+          "internship": false
+        }
       },
       {
         "name": "Git",
-        "proficiency_score": 9.5,
-        "evidence_source": "Certification"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 3,
+          "internship": false
+        }
       },
       {
-        "name": "Computer Vision",
-        "proficiency_score": 8.6,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "PostgreSQL",
-        "proficiency_score": 9.1,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "C++",
-        "proficiency_score": 9.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "FastAPI",
-        "proficiency_score": 7.6,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "GraphQL",
-        "proficiency_score": 9.0,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "System Design",
-        "proficiency_score": 8.6,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "NLP",
-        "proficiency_score": 9.2,
-        "evidence_source": "Hackathon"
-      }
-    ],
-    "experience_years": 0.0,
-    "email": "dramsey@example.org",
-    "phone": "+1-280-669-9016x272"
-  },
-  {
-    "id": "STU_029",
-    "name": "Daniel Murphy",
-    "gpa": 9.55,
-    "backlogs": 0,
-    "skills": [
-      {
-        "name": "AWS",
-        "proficiency_score": 9.9,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "Scikit-learn",
-        "proficiency_score": 10.0,
-        "evidence_source": "GitHub Project"
-      },
-      {
-        "name": "Go",
-        "proficiency_score": 8.9,
-        "evidence_source": "Certification"
-      },
-      {
-        "name": "Git",
-        "proficiency_score": 8.7,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "C++",
-        "proficiency_score": 9.8,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "PyTorch",
-        "proficiency_score": 10.0,
-        "evidence_source": "Internship"
-      },
-      {
-        "name": "NumPy",
-        "proficiency_score": 9.1,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "SQL",
-        "proficiency_score": 9.9,
-        "evidence_source": "Hackathon"
+        "name": "REST API",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 3,
+          "internship": true
+        }
       },
       {
         "name": "Java",
-        "proficiency_score": 8.4,
-        "evidence_source": "Hackathon"
-      },
-      {
-        "name": "Microservices",
-        "proficiency_score": 8.3,
-        "evidence_source": "Certification"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
       }
     ],
-    "experience_years": 1.0,
-    "email": "aramirez@example.com",
-    "phone": "270-580-5310"
+    "communication_score": 8,
+    "mock_interview_score": 9,
+    "resume_trust_score": 0.8,
+    "email": "alkawable@example.net",
+    "phone": "03834657871"
   },
   {
-    "id": "STU_030",
-    "name": "Alex Hernandez",
-    "gpa": 7.16,
-    "backlogs": 0,
+    "student_id": "S011",
+    "name": "Umang Bhatt",
+    "branch": "CSE",
+    "cgpa": 5.42,
+    "active_backlogs": 2,
     "skills": [
       {
-        "name": "AWS",
-        "proficiency_score": 5.8,
-        "evidence_source": "University Project"
+        "name": "Pandas",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
-        "name": "PostgreSQL",
-        "proficiency_score": 5.3,
-        "evidence_source": "Certification"
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
-        "name": "Microservices",
-        "proficiency_score": 7.2,
-        "evidence_source": "Certification"
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
-        "name": "Deep Learning",
-        "proficiency_score": 6.6,
-        "evidence_source": "University Project"
+        "name": "SQL",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
       },
       {
-        "name": "Kubernetes",
-        "proficiency_score": 6.2,
-        "evidence_source": "Listed in Resume"
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.03,
+    "email": "ansh98@example.org",
+    "phone": "3010310518"
+  },
+  {
+    "student_id": "S012",
+    "name": "Arya Sunder",
+    "branch": "IT",
+    "cgpa": 9.69,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Angular",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 3,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 4,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.75,
+    "email": "kevinsolanki@example.org",
+    "phone": "06311656670"
+  },
+  {
+    "student_id": "S013",
+    "name": "Darsh Rau",
+    "branch": "IT",
+    "cgpa": 7.1,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.48,
+    "email": "ikbal33@example.org",
+    "phone": "7262473178"
+  },
+  {
+    "student_id": "S014",
+    "name": "Chandresh Zachariah",
+    "branch": "IT",
+    "cgpa": 8.19,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
       },
       {
         "name": "C++",
-        "proficiency_score": 5.5,
-        "evidence_source": "University Project"
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
       },
       {
-        "name": "NLP",
-        "proficiency_score": 6.6,
-        "evidence_source": "Certification"
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
       }
     ],
-    "experience_years": 0.4,
-    "email": "thomaswilson@example.org",
-    "phone": "645.829.9124x190"
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.74,
+    "email": "chanderwarjas@example.org",
+    "phone": "07736026064"
+  },
+  {
+    "student_id": "S015",
+    "name": "Bhavika Sampath",
+    "branch": "ME",
+    "cgpa": 6.78,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "NumPy",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 4,
+    "resume_trust_score": 0.0,
+    "email": "mdubey@example.com",
+    "phone": "+910980500978"
+  },
+  {
+    "student_id": "S016",
+    "name": "Dakshesh Trivedi",
+    "branch": "ECE",
+    "cgpa": 7.7,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "MongoDB",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.31,
+    "email": "grewalekapad@example.net",
+    "phone": "+913619399091"
+  },
+  {
+    "student_id": "S017",
+    "name": "Diya Lal",
+    "branch": "AI",
+    "cgpa": 5.94,
+    "active_backlogs": 5,
+    "skills": [
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.01,
+    "email": "diptakhare@example.com",
+    "phone": "02475107991"
+  },
+  {
+    "student_id": "S018",
+    "name": "Tanay Toor",
+    "branch": "IT",
+    "cgpa": 7.38,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Django",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.16,
+    "email": "kevin51@example.org",
+    "phone": "04278498084"
+  },
+  {
+    "student_id": "S019",
+    "name": "Krish Lalla",
+    "branch": "IT",
+    "cgpa": 8.1,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "Pandas",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.55,
+    "email": "chhabranachiket@example.com",
+    "phone": "09353487401"
+  },
+  {
+    "student_id": "S020",
+    "name": "Aradhana Basu",
+    "branch": "ME",
+    "cgpa": 7.83,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.57,
+    "email": "nathkalpit@example.net",
+    "phone": "02786801128"
+  },
+  {
+    "student_id": "S021",
+    "name": "Kala Divan",
+    "branch": "IT",
+    "cgpa": 5.5,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "Git",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 3,
+    "resume_trust_score": 0.03,
+    "email": "cdatta@example.com",
+    "phone": "00533158692"
+  },
+  {
+    "student_id": "S022",
+    "name": "Nicholas Goel",
+    "branch": "ME",
+    "cgpa": 5.61,
+    "active_backlogs": 5,
+    "skills": [
+      {
+        "name": "React",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 3,
+    "resume_trust_score": 0.01,
+    "email": "lbakshi@example.net",
+    "phone": "06342160733"
+  },
+  {
+    "student_id": "S023",
+    "name": "Inaya Mody",
+    "branch": "AI",
+    "cgpa": 8.87,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 4,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 4,
+          "certifications": 3,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 9,
+    "mock_interview_score": 10,
+    "resume_trust_score": 0.67,
+    "email": "udantbajwa@example.net",
+    "phone": "+916541458685"
+  },
+  {
+    "student_id": "S024",
+    "name": "Jack Lal",
+    "branch": "ECE",
+    "cgpa": 7.9,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.5,
+    "email": "alkabarad@example.org",
+    "phone": "6556981693"
+  },
+  {
+    "student_id": "S025",
+    "name": "Chaitanya Sarin",
+    "branch": "ECE",
+    "cgpa": 6.1,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.04,
+    "email": "venkateshronith@example.com",
+    "phone": "01595148465"
+  },
+  {
+    "student_id": "S026",
+    "name": "Chakrika Datta",
+    "branch": "IT",
+    "cgpa": 7.2,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.33,
+    "email": "osharaghavan@example.net",
+    "phone": "2994680443"
+  },
+  {
+    "student_id": "S027",
+    "name": "Ekanta Shroff",
+    "branch": "IT",
+    "cgpa": 5.55,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "Django",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.06,
+    "email": "rsathe@example.org",
+    "phone": "7214895134"
+  },
+  {
+    "student_id": "S028",
+    "name": "Rushil Din",
+    "branch": "ECE",
+    "cgpa": 6.74,
+    "active_backlogs": 2,
+    "skills": [
+      {
+        "name": "Java",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 4,
+    "resume_trust_score": 0.0,
+    "email": "batrayash@example.com",
+    "phone": "1769367632"
+  },
+  {
+    "student_id": "S029",
+    "name": "Hredhaan Sandal",
+    "branch": "AI",
+    "cgpa": 7.6,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.63,
+    "email": "patrickvasa@example.com",
+    "phone": "+918317278895"
+  },
+  {
+    "student_id": "S030",
+    "name": "Yamini Sandhu",
+    "branch": "ECE",
+    "cgpa": 7.01,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "NumPy",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Machine Learning",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.46,
+    "email": "vdutt@example.com",
+    "phone": "04348734714"
+  },
+  {
+    "student_id": "S031",
+    "name": "Anita Nayak",
+    "branch": "AI",
+    "cgpa": 5.46,
+    "active_backlogs": 3,
+    "skills": [
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Data Structures",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 4,
+    "mock_interview_score": 4,
+    "resume_trust_score": 0.18,
+    "email": "faris22@example.org",
+    "phone": "02316658760"
+  },
+  {
+    "student_id": "S032",
+    "name": "Osha Ramachandran",
+    "branch": "AI",
+    "cgpa": 5.51,
+    "active_backlogs": 4,
+    "skills": [
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.31,
+    "email": "raivansha@example.org",
+    "phone": "04668893734"
+  },
+  {
+    "student_id": "S033",
+    "name": "Vedika Balakrishnan",
+    "branch": "AI",
+    "cgpa": 8.23,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.39,
+    "email": "qnayar@example.net",
+    "phone": "02729806990"
+  },
+  {
+    "student_id": "S034",
+    "name": "Priya Deshmukh",
+    "branch": "ME",
+    "cgpa": 6.29,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.23,
+    "email": "dgopal@example.com",
+    "phone": "05375564641"
+  },
+  {
+    "student_id": "S035",
+    "name": "Anirudh Zacharia",
+    "branch": "IT",
+    "cgpa": 7.22,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "DSA",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.36,
+    "email": "pallaudarsh@example.net",
+    "phone": "+910033092327"
+  },
+  {
+    "student_id": "S036",
+    "name": "Tejas Shroff",
+    "branch": "ME",
+    "cgpa": 7.97,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Pandas",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.44,
+    "email": "jyoti29@example.net",
+    "phone": "1241904966"
+  },
+  {
+    "student_id": "S037",
+    "name": "Faqid Kibe",
+    "branch": "ECE",
+    "cgpa": 9.46,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "AWS",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 3,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "SQL",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.71,
+    "email": "mitrajai@example.net",
+    "phone": "+915865185067"
+  },
+  {
+    "student_id": "S038",
+    "name": "Rachita Pathak",
+    "branch": "AI",
+    "cgpa": 6.55,
+    "active_backlogs": 5,
+    "skills": [
+      {
+        "name": "SQL",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 3,
+    "mock_interview_score": 3,
+    "resume_trust_score": 0.0,
+    "email": "bdua@example.org",
+    "phone": "8498776945"
+  },
+  {
+    "student_id": "S039",
+    "name": "Gabriel Mallick",
+    "branch": "ECE",
+    "cgpa": 7.46,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "React",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.36,
+    "email": "wkohli@example.com",
+    "phone": "9650752735"
+  },
+  {
+    "student_id": "S040",
+    "name": "Harini Mammen",
+    "branch": "ECE",
+    "cgpa": 7.61,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.59,
+    "email": "advaith83@example.org",
+    "phone": "+916783777014"
+  },
+  {
+    "student_id": "S041",
+    "name": "Nidhi Kohli",
+    "branch": "ME",
+    "cgpa": 8.46,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Git",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.0,
+    "email": "jyoti78@example.net",
+    "phone": "06855744431"
+  },
+  {
+    "student_id": "S042",
+    "name": "Diya Dar",
+    "branch": "ECE",
+    "cgpa": 8.43,
+    "active_backlogs": 1,
+    "skills": [
+      {
+        "name": "React",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Angular",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 5,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.61,
+    "email": "rehaankalita@example.net",
+    "phone": "04989413435"
+  },
+  {
+    "student_id": "S043",
+    "name": "Chasmum Atwal",
+    "branch": "CSE",
+    "cgpa": 7.57,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Docker",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Machine Learning",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 6,
+    "mock_interview_score": 5,
+    "resume_trust_score": 0.67,
+    "email": "anushabath@example.org",
+    "phone": "4271094777"
+  },
+  {
+    "student_id": "S044",
+    "name": "Qarin Behl",
+    "branch": "ECE",
+    "cgpa": 7.42,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "REST API",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": true
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 8,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.53,
+    "email": "vanya11@example.com",
+    "phone": "01902294131"
+  },
+  {
+    "student_id": "S045",
+    "name": "Upkaar Virk",
+    "branch": "CSE",
+    "cgpa": 6.3,
+    "active_backlogs": 2,
+    "skills": [
+      {
+        "name": "Git",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "REST API",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "NumPy",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 4,
+    "mock_interview_score": 3,
+    "resume_trust_score": 0.2,
+    "email": "cseshadri@example.com",
+    "phone": "6499091334"
+  },
+  {
+    "student_id": "S046",
+    "name": "Naksh Khatri",
+    "branch": "CSE",
+    "cgpa": 9.33,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Git",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "AWS",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 4,
+          "certifications": 1,
+          "internship": false
+        }
+      },
+      {
+        "name": "Python",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 3,
+          "internship": false
+        }
+      },
+      {
+        "name": "Docker",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 10,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.3,
+    "email": "falandugar@example.org",
+    "phone": "07974034471"
+  },
+  {
+    "student_id": "S047",
+    "name": "Aishani Hora",
+    "branch": "AI",
+    "cgpa": 7.02,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "MongoDB",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 3,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 1,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "DSA",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 1,
+          "certifications": 0,
+          "internship": true
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": false,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 6,
+    "resume_trust_score": 0.31,
+    "email": "icontractor@example.org",
+    "phone": "2421024994"
+  },
+  {
+    "student_id": "S048",
+    "name": "Jeet Sidhu",
+    "branch": "AI",
+    "cgpa": 9.34,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "Flask",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 5,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "Machine Learning",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": false
+        }
+      }
+    ],
+    "communication_score": 9,
+    "mock_interview_score": 9,
+    "resume_trust_score": 0.63,
+    "email": "neha48@example.net",
+    "phone": "07190659401"
+  },
+  {
+    "student_id": "S049",
+    "name": "Ansh Luthra",
+    "branch": "ECE",
+    "cgpa": 9.08,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Pandas",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 1,
+          "internship": true
+        }
+      },
+      {
+        "name": "Node.js",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 5,
+          "certifications": 3,
+          "internship": true
+        }
+      },
+      {
+        "name": "Java",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": false,
+          "projects": 5,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "C++",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 3,
+          "internship": false
+        }
+      },
+      {
+        "name": "Flask",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": true,
+          "projects": 4,
+          "certifications": 1,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 10,
+    "mock_interview_score": 7,
+    "resume_trust_score": 0.85,
+    "email": "gillupma@example.net",
+    "phone": "7429671756"
+  },
+  {
+    "student_id": "S050",
+    "name": "Ekani Cheema",
+    "branch": "ME",
+    "cgpa": 7.84,
+    "active_backlogs": 0,
+    "skills": [
+      {
+        "name": "REST API",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Django",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "Git",
+        "claimed_level": "advanced",
+        "evidence": {
+          "github": false,
+          "projects": 0,
+          "certifications": 0,
+          "internship": false
+        }
+      },
+      {
+        "name": "React",
+        "claimed_level": "intermediate",
+        "evidence": {
+          "github": true,
+          "projects": 3,
+          "certifications": 2,
+          "internship": false
+        }
+      },
+      {
+        "name": "JavaScript",
+        "claimed_level": "beginner",
+        "evidence": {
+          "github": true,
+          "projects": 2,
+          "certifications": 2,
+          "internship": true
+        }
+      }
+    ],
+    "communication_score": 7,
+    "mock_interview_score": 8,
+    "resume_trust_score": 0.15,
+    "email": "forumsabharwal@example.net",
+    "phone": "04680715451"
   }
 ]
