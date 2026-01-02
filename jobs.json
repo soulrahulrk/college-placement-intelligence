@@ -1,0 +1,202 @@
+[
+  {
+    "id": "JOB_001",
+    "company_name": "Slack",
+    "role": "Software Engineer",
+    "must_have_skills": [
+      "Spring Boot",
+      "JavaScript",
+      "Python",
+      "Microservices"
+    ],
+    "good_to_have_skills": [
+      "Angular",
+      "C#",
+      "Node.js",
+      "Java"
+    ],
+    "min_gpa": 7.2,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.5,
+    "company_type": "Product"
+  },
+  {
+    "id": "JOB_002",
+    "company_name": "Atlassian",
+    "role": "Backend Developer",
+    "must_have_skills": [
+      "TypeScript",
+      "Spring Boot",
+      "Data Structures"
+    ],
+    "good_to_have_skills": [
+      "Vue.js",
+      "REST API",
+      "Angular",
+      "FastAPI"
+    ],
+    "min_gpa": 7.99,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.5,
+    "company_type": "Product"
+  },
+  {
+    "id": "JOB_003",
+    "company_name": "Slack",
+    "role": "Backend Developer",
+    "must_have_skills": [
+      "Git",
+      "TypeScript",
+      "C++"
+    ],
+    "good_to_have_skills": [
+      "Vue.js",
+      "Spring Boot",
+      "Django",
+      "GraphQL"
+    ],
+    "min_gpa": 7.46,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.5,
+    "company_type": "Product"
+  },
+  {
+    "id": "JOB_004",
+    "company_name": "TCS",
+    "role": "Frontend Developer",
+    "must_have_skills": [
+      "Spring Boot",
+      "TypeScript",
+      "FastAPI",
+      "Agile",
+      "Node.js"
+    ],
+    "good_to_have_skills": [
+      "Django",
+      "Git",
+      "GraphQL",
+      "Microservices"
+    ],
+    "min_gpa": 7.23,
+    "max_backlogs_allowed": 2,
+    "min_experience_years": 0.0,
+    "company_type": "Service"
+  },
+  {
+    "id": "JOB_005",
+    "company_name": "Infosys",
+    "role": "Backend Developer",
+    "must_have_skills": [
+      "Vue.js",
+      "Spring Boot",
+      "Data Structures",
+      "Django"
+    ],
+    "good_to_have_skills": [
+      "FastAPI",
+      "TypeScript"
+    ],
+    "min_gpa": 7.07,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.0,
+    "company_type": "Service"
+  },
+  {
+    "id": "JOB_006",
+    "company_name": "Atlassian",
+    "role": "Full Stack Developer",
+    "must_have_skills": [
+      "Git",
+      "FastAPI",
+      "Python",
+      "TypeScript"
+    ],
+    "good_to_have_skills": [
+      "Agile",
+      "Rust"
+    ],
+    "min_gpa": 7.5,
+    "max_backlogs_allowed": 1,
+    "min_experience_years": 0.0,
+    "company_type": "Product"
+  },
+  {
+    "id": "JOB_007",
+    "company_name": "SAP",
+    "role": "Frontend Developer",
+    "must_have_skills": [
+      "C++",
+      "Vue.js",
+      "System Design",
+      "Agile"
+    ],
+    "good_to_have_skills": [
+      "FastAPI",
+      "Django",
+      "REST API",
+      "Java"
+    ],
+    "min_gpa": 7.84,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.5,
+    "company_type": "MNC"
+  },
+  {
+    "id": "JOB_008",
+    "company_name": "Meta",
+    "role": "Frontend Developer",
+    "must_have_skills": [
+      "JavaScript",
+      "Microservices",
+      "Data Structures"
+    ],
+    "good_to_have_skills": [
+      "TypeScript",
+      "Spring Boot",
+      "Rust"
+    ],
+    "min_gpa": 8.5,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.5,
+    "company_type": "MNC"
+  },
+  {
+    "id": "JOB_009",
+    "company_name": "TCS",
+    "role": "Software Engineer",
+    "must_have_skills": [
+      "Node.js",
+      "Flask",
+      "TypeScript",
+      "C#"
+    ],
+    "good_to_have_skills": [
+      "Microservices",
+      "Agile",
+      "Rust"
+    ],
+    "min_gpa": 6.82,
+    "max_backlogs_allowed": 0,
+    "min_experience_years": 0.0,
+    "company_type": "Service"
+  },
+  {
+    "id": "JOB_010",
+    "company_name": "DataFusion",
+    "role": "Data Scientist",
+    "must_have_skills": [
+      "TensorFlow",
+      "TypeScript",
+      "C#"
+    ],
+    "good_to_have_skills": [
+      "Machine Learning",
+      "PostgreSQL",
+      "Computer Vision"
+    ],
+    "min_gpa": 6.61,
+    "max_backlogs_allowed": 1,
+    "min_experience_years": 0.6,
+    "company_type": "Startup"
+  }
+]

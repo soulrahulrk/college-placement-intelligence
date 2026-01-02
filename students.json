@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "STU_001",
+    "name": "Allison Hill",
+    "gpa": 7.88,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 5.9,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency_score": 7.1,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Angular",
+        "proficiency_score": 5.7,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Flask",
+        "proficiency_score": 6.8,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Data Structures",
+        "proficiency_score": 5.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Rust",
+        "proficiency_score": 5.2,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.7,
+    "email": "donaldgarcia@example.net",
+    "phone": "+1-219-560-0133"
+  },
+  {
+    "id": "STU_002",
+    "name": "Meredith Barnes",
+    "gpa": 7.44,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "C++",
+        "proficiency_score": 6.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 6.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "FastAPI",
+        "proficiency_score": 5.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 5.5,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Go",
+        "proficiency_score": 6.8,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 6.6,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 0.7,
+    "email": "zlawrence@example.org",
+    "phone": "001-626-254-2351x16155"
+  },
+  {
+    "id": "STU_003",
+    "name": "Kimberly Dudley",
+    "gpa": 7.91,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 5.6,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency_score": 7.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "REST API",
+        "proficiency_score": 5.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 7.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "FastAPI",
+        "proficiency_score": 7.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "NumPy",
+        "proficiency_score": 5.5,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.2,
+    "email": "smiller@example.net",
+    "phone": "+1-659-931-0341x316"
+  },
+  {
+    "id": "STU_004",
+    "name": "Holly Wood",
+    "gpa": 6.25,
+    "backlogs": 3,
+    "skills": [
+      {
+        "name": "React",
+        "proficiency_score": 3.7,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 4.5,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 5.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Docker",
+        "proficiency_score": 3.5,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 5.4,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "CI/CD",
+        "proficiency_score": 4.8,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 4.1,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 4.6,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Deep Learning",
+        "proficiency_score": 5.0,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 0.1,
+    "email": "elizabethmiles@example.net",
+    "phone": "+1-219-528-3276x4835"
+  },
+  {
+    "id": "STU_005",
+    "name": "Renee Morales",
+    "gpa": 7.17,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "PyTorch",
+        "proficiency_score": 7.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Vue.js",
+        "proficiency_score": 5.7,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 6.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 5.4,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 6.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Azure",
+        "proficiency_score": 7.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Node.js",
+        "proficiency_score": 5.8,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 0.1,
+    "email": "clarksherri@example.net",
+    "phone": "837-767-2423x88496"
+  },
+  {
+    "id": "STU_006",
+    "name": "Zachary Hicks",
+    "gpa": 8.53,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Pandas",
+        "proficiency_score": 7.8,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 9.9,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "JavaScript",
+        "proficiency_score": 8.2,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 9.9,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 9.3,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Go",
+        "proficiency_score": 10.0,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 8.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "AWS",
+        "proficiency_score": 7.8,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "TypeScript",
+        "proficiency_score": 7.7,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Docker",
+        "proficiency_score": 9.0,
+        "evidence_source": "GitHub Project"
+      }
+    ],
+    "experience_years": 1.8,
+    "email": "camposmichelle@example.org",
+    "phone": "+1-326-691-6697x8480"
+  },
+  {
+    "id": "STU_007",
+    "name": "Gina Carter",
+    "gpa": 8.85,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "REST API",
+        "proficiency_score": 9.2,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "JavaScript",
+        "proficiency_score": 8.8,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "FastAPI",
+        "proficiency_score": 8.1,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "TypeScript",
+        "proficiency_score": 9.5,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 7.7,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 8.4,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "GraphQL",
+        "proficiency_score": 8.7,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Azure",
+        "proficiency_score": 9.2,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 7.7,
+        "evidence_source": "GitHub Project"
+      }
+    ],
+    "experience_years": 0.0,
+    "email": "shawnmckay@example.net",
+    "phone": "282-781-4893x252"
+  },
+  {
+    "id": "STU_008",
+    "name": "Brian Cox DVM",
+    "gpa": 8.09,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Docker",
+        "proficiency_score": 5.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 6.1,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "React",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 7.5,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Node.js",
+        "proficiency_score": 7.4,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency_score": 5.4,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.2,
+    "email": "john39@example.org",
+    "phone": "671-882-2782"
+  },
+  {
+    "id": "STU_009",
+    "name": "Tanya Campos",
+    "gpa": 7.73,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Vue.js",
+        "proficiency_score": 7.4,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 6.7,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 5.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 5.5,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 6.4,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 5.1,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 6.2,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 0.9,
+    "email": "jenniferross@example.net",
+    "phone": "+1-557-587-1331x5098"
+  },
+  {
+    "id": "STU_010",
+    "name": "Michael Brown",
+    "gpa": 8.38,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Go",
+        "proficiency_score": 6.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Node.js",
+        "proficiency_score": 5.6,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "TypeScript",
+        "proficiency_score": 5.1,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Git",
+        "proficiency_score": 6.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 6.4,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 1.0,
+    "email": "whiteheadmichele@example.org",
+    "phone": "334.373.8299x73763"
+  },
+  {
+    "id": "STU_011",
+    "name": "Heather Jenkins",
+    "gpa": 7.47,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "NumPy",
+        "proficiency_score": 5.8,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 5.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 7.5,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Deep Learning",
+        "proficiency_score": 5.2,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "React",
+        "proficiency_score": 6.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 7.3,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.7,
+    "email": "nuneztracey@example.org",
+    "phone": "4658133387"
+  },
+  {
+    "id": "STU_012",
+    "name": "Joel Baxter",
+    "gpa": 6.82,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 5.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Docker",
+        "proficiency_score": 3.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 3.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "GCP",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 5.1,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 4.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 5.7,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.1,
+    "email": "ramosmichelle@example.net",
+    "phone": "908-501-3267"
+  },
+  {
+    "id": "STU_013",
+    "name": "Stephanie Martin",
+    "gpa": 6.77,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "C++",
+        "proficiency_score": 4.7,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 3.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 4.6,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "React",
+        "proficiency_score": 4.7,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "REST API",
+        "proficiency_score": 4.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 3.9,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Vue.js",
+        "proficiency_score": 5.7,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 5.0,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 4.1,
+        "evidence_source": "Listed in Resume"
+      }
+    ],
+    "experience_years": 0.4,
+    "email": "gallowayjoseph@example.com",
+    "phone": "268-272-3430x9805"
+  },
+  {
+    "id": "STU_014",
+    "name": "Kathryn Farrell",
+    "gpa": 7.84,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 7.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Vue.js",
+        "proficiency_score": 7.0,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Node.js",
+        "proficiency_score": 7.0,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "TensorFlow",
+        "proficiency_score": 5.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Java",
+        "proficiency_score": 5.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 7.1,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.9,
+    "email": "brianromero@example.org",
+    "phone": "291-336-1939"
+  },
+  {
+    "id": "STU_015",
+    "name": "Kevin Mills",
+    "gpa": 7.33,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "FastAPI",
+        "proficiency_score": 7.4,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Data Structures",
+        "proficiency_score": 5.9,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Java",
+        "proficiency_score": 6.0,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Django",
+        "proficiency_score": 5.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Deep Learning",
+        "proficiency_score": 5.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 5.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency_score": 5.1,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.3,
+    "email": "james53@example.com",
+    "phone": "(524)675-1079x9118"
+  },
+  {
+    "id": "STU_016",
+    "name": "Gregory Jones",
+    "gpa": 6.39,
+    "backlogs": 2,
+    "skills": [
+      {
+        "name": "Azure",
+        "proficiency_score": 4.6,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "C#",
+        "proficiency_score": 4.1,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 5.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 4.9,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Django",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 4.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 4.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 4.7,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.2,
+    "email": "mikemoore@example.net",
+    "phone": "001-449-680-8412x411"
+  },
+  {
+    "id": "STU_017",
+    "name": "Daniel Cooper",
+    "gpa": 8.79,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Node.js",
+        "proficiency_score": 8.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 9.2,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 9.5,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 9.1,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Deep Learning",
+        "proficiency_score": 8.8,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 7.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 9.2,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "GraphQL",
+        "proficiency_score": 9.5,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 7.6,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Flask",
+        "proficiency_score": 10.0,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 8.6,
+        "evidence_source": "GitHub Project"
+      }
+    ],
+    "experience_years": 1.4,
+    "email": "william40@example.org",
+    "phone": "+1-264-300-5242x7868"
+  },
+  {
+    "id": "STU_018",
+    "name": "Stephen Mckee",
+    "gpa": 8.33,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 6.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Angular",
+        "proficiency_score": 6.4,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "GraphQL",
+        "proficiency_score": 6.1,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 6.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Rust",
+        "proficiency_score": 6.5,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 6.5,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "FastAPI",
+        "proficiency_score": 7.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Node.js",
+        "proficiency_score": 7.1,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.5,
+    "email": "davenportbrandi@example.org",
+    "phone": "(420)545-0533x15869"
+  },
+  {
+    "id": "STU_019",
+    "name": "Vanessa Cochran",
+    "gpa": 7.82,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 6.8,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "REST API",
+        "proficiency_score": 5.7,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency_score": 7.2,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "GCP",
+        "proficiency_score": 5.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "AWS",
+        "proficiency_score": 6.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Data Structures",
+        "proficiency_score": 6.8,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 6.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 6.4,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.5,
+    "email": "vjohnson@example.com",
+    "phone": "(534)221-6073x37543"
+  },
+  {
+    "id": "STU_020",
+    "name": "Jennifer Ramirez",
+    "gpa": 9.12,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 9.6,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "CI/CD",
+        "proficiency_score": 8.8,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Java",
+        "proficiency_score": 8.7,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 8.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Data Structures",
+        "proficiency_score": 8.5,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Computer Vision",
+        "proficiency_score": 9.3,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 9.8,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Tableau",
+        "proficiency_score": 9.8,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 7.7,
+        "evidence_source": "GitHub Project"
+      }
+    ],
+    "experience_years": 1.7,
+    "email": "rasmussenjoshua@example.net",
+    "phone": "768.750.1429x40196"
+  },
+  {
+    "id": "STU_021",
+    "name": "William Wilson",
+    "gpa": 7.64,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 5.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "NumPy",
+        "proficiency_score": 5.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Flask",
+        "proficiency_score": 6.2,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 6.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 5.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 7.0,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.1,
+    "email": "jonathanfletcher@example.org",
+    "phone": "783.856.1595x14846"
+  },
+  {
+    "id": "STU_022",
+    "name": "Kristen Lee",
+    "gpa": 6.48,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Java",
+        "proficiency_score": 4.4,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 5.3,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Angular",
+        "proficiency_score": 4.8,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 5.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "React",
+        "proficiency_score": 5.9,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Computer Vision",
+        "proficiency_score": 4.7,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "C#",
+        "proficiency_score": 4.7,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.1,
+    "email": "lbyrd@example.net",
+    "phone": "001-746-980-4436"
+  },
+  {
+    "id": "STU_023",
+    "name": "Michael Dixon",
+    "gpa": 9.86,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Django",
+        "proficiency_score": 9.2,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "TypeScript",
+        "proficiency_score": 8.8,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "CI/CD",
+        "proficiency_score": 7.5,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "REST API",
+        "proficiency_score": 9.6,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 8.6,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Rust",
+        "proficiency_score": 9.1,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 9.3,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "C#",
+        "proficiency_score": 7.9,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 9.0,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 8.7,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Tableau",
+        "proficiency_score": 8.3,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.8,
+    "email": "donnacampbell@example.net",
+    "phone": "+1-395-913-4332x0037"
+  },
+  {
+    "id": "STU_024",
+    "name": "Mark Lee",
+    "gpa": 5.87,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 3.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 4.1,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 4.0,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Agile",
+        "proficiency_score": 4.7,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 3.3,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Apache Spark",
+        "proficiency_score": 4.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Java",
+        "proficiency_score": 5.1,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "AWS",
+        "proficiency_score": 4.3,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.4,
+    "email": "psnyder@example.org",
+    "phone": "+1-401-963-2870x8317"
+  },
+  {
+    "id": "STU_025",
+    "name": "Victoria Larson",
+    "gpa": 8.53,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Data Structures",
+        "proficiency_score": 8.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency_score": 8.2,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 8.1,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "CI/CD",
+        "proficiency_score": 8.3,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Power BI",
+        "proficiency_score": 8.0,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Computer Vision",
+        "proficiency_score": 8.2,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 10.0,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "GCP",
+        "proficiency_score": 8.2,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Tableau",
+        "proficiency_score": 7.9,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 9.3,
+        "evidence_source": "GitHub Project"
+      }
+    ],
+    "experience_years": 0.4,
+    "email": "usalazar@example.net",
+    "phone": "(387)627-7434x87347"
+  },
+  {
+    "id": "STU_026",
+    "name": "George Orozco",
+    "gpa": 8.69,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 8.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 8.4,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "React",
+        "proficiency_score": 8.1,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "REST API",
+        "proficiency_score": 7.8,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "AWS",
+        "proficiency_score": 8.5,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Rust",
+        "proficiency_score": 8.9,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Python",
+        "proficiency_score": 7.9,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Terraform",
+        "proficiency_score": 7.7,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 1.9,
+    "email": "taylorjesse@example.net",
+    "phone": "(231)566-5876"
+  },
+  {
+    "id": "STU_027",
+    "name": "Jean Carrillo",
+    "gpa": 7.37,
+    "backlogs": 1,
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "proficiency_score": 6.4,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 6.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 5.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "Pandas",
+        "proficiency_score": 6.6,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "CI/CD",
+        "proficiency_score": 6.7,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 5.6,
+        "evidence_source": "University Project"
+      }
+    ],
+    "experience_years": 0.8,
+    "email": "gateskathy@example.com",
+    "phone": "805.946.6889x3734"
+  },
+  {
+    "id": "STU_028",
+    "name": "George Shelton",
+    "gpa": 9.33,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 9.2,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Git",
+        "proficiency_score": 9.5,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Computer Vision",
+        "proficiency_score": 8.6,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 9.1,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 9.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "FastAPI",
+        "proficiency_score": 7.6,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "GraphQL",
+        "proficiency_score": 9.0,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "System Design",
+        "proficiency_score": 8.6,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 9.2,
+        "evidence_source": "Hackathon"
+      }
+    ],
+    "experience_years": 0.0,
+    "email": "dramsey@example.org",
+    "phone": "+1-280-669-9016x272"
+  },
+  {
+    "id": "STU_029",
+    "name": "Daniel Murphy",
+    "gpa": 9.55,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "AWS",
+        "proficiency_score": 9.9,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "Scikit-learn",
+        "proficiency_score": 10.0,
+        "evidence_source": "GitHub Project"
+      },
+      {
+        "name": "Go",
+        "proficiency_score": 8.9,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Git",
+        "proficiency_score": 8.7,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 9.8,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency_score": 10.0,
+        "evidence_source": "Internship"
+      },
+      {
+        "name": "NumPy",
+        "proficiency_score": 9.1,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "SQL",
+        "proficiency_score": 9.9,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Java",
+        "proficiency_score": 8.4,
+        "evidence_source": "Hackathon"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 8.3,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 1.0,
+    "email": "aramirez@example.com",
+    "phone": "270-580-5310"
+  },
+  {
+    "id": "STU_030",
+    "name": "Alex Hernandez",
+    "gpa": 7.16,
+    "backlogs": 0,
+    "skills": [
+      {
+        "name": "AWS",
+        "proficiency_score": 5.8,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency_score": 5.3,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Microservices",
+        "proficiency_score": 7.2,
+        "evidence_source": "Certification"
+      },
+      {
+        "name": "Deep Learning",
+        "proficiency_score": 6.6,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency_score": 6.2,
+        "evidence_source": "Listed in Resume"
+      },
+      {
+        "name": "C++",
+        "proficiency_score": 5.5,
+        "evidence_source": "University Project"
+      },
+      {
+        "name": "NLP",
+        "proficiency_score": 6.6,
+        "evidence_source": "Certification"
+      }
+    ],
+    "experience_years": 0.4,
+    "email": "thomaswilson@example.org",
+    "phone": "645.829.9124x190"
+  }
+]
