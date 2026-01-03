@@ -1,10 +1,11 @@
 # College Placement Intelligence System
 
-**A Realistic Indian Engineering College Placement Cell System with Resume Credibility Detection, Risk Assessment, and Explainable AI Decisions**
+**A Realistic Indian Engineering College Placement Cell System with Resume Credibility Detection, Risk Assessment, ML-Based Predictions, and Explainable AI Decisions**
 
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
 [![Pydantic V2](https://img.shields.io/badge/pydantic-V2-green.svg)](https://docs.pydantic.dev/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.51.0-red.svg)](https://streamlit.io/)
+[![Version](https://img.shields.io/badge/version-2.0-orange.svg)](https://github.com/soulrahulrk/college-placement-intelligence)
 
 ---
 
@@ -21,8 +22,145 @@
 - ✅ **Risk assessment** (LOW/MEDIUM/HIGH based on historical failures)
 - ✅ **Explainable decisions** (student + officer views)
 - ✅ **Indian context** (branches: CSE/IT/AI/ECE/ME, companies: TCS/Infosys/Google India)
+- ✅ **Seat allocation with ranking** (limited positions per company)
+- ✅ **ML-based success prediction** (custom Logistic Regression)
+- ✅ **Bias & fairness auditing** (CGPA vs skills analysis)
 
 **No assumptions. No shortcuts. Just working logic.**
+
+---
+
+## 🆕 Version 2.0 - Major Upgrades
+
+### 5 Mandatory Upgrades Implemented
+
+| Upgrade | Feature | Status |
+|---------|---------|--------|
+| **1** | Company Seat Allocation & Ranking | ✅ Complete |
+| **2** | Profile Improvement & Temporal Drift | ✅ Complete |
+| **3** | Learning-Based Success Probability | ✅ Complete |
+| **4** | Credibility Penalty Bug Fix | ✅ Complete |
+| **5** | Bias & Fairness Audit | ✅ Complete |
+
+### Upgrade Details
+
+#### 🏆 Upgrade 1: Company Seat Allocation & Ranking
+Companies have **limited hiring slots** (not all eligible students get selected).
+
+```python
+from upgrades import allocate_seats
+
+allocation = allocate_seats(
+    students=eligible_students,
+    company=google_india,
+    logs=placement_logs,
+    match_function=match_student_to_job,
+    open_positions=5
+)
+
+# Output:
+# Selected (5): Luke Lanka (Rank 1), Neel Zacharia (Rank 2)...
+# Rejected due to seat limit (23): Aryan Maharaj, Rushil Saini...
+# Cutoff Score: 0.66
+```
+
+**Key Features:**
+- `open_positions` field added to JobDescription (MNCs: 3-8, Startups: 2-5, Service: 15-50)
+- Ranking by: match_score (desc) + risk_score (asc for ties)
+- Produces: Selected, Waitlisted, Rejected states with cutoff score
+
+#### 📈 Upgrade 2: Profile Improvement & Temporal Drift
+Track student growth over semesters 5-8.
+
+```python
+from upgrades import simulate_student_growth, generate_growth_timeline
+
+profile = simulate_student_growth(student, calculate_credibility, semesters=[5, 6, 7, 8])
+print(generate_growth_timeline(profile))
+
+# Output:
+# Semester 5: CGPA 7.2, Communication 5/10, GitHub Projects: 1
+# Semester 6: CGPA 7.4, Communication 6/10, GitHub Projects: 2
+# ...
+# Growth Summary: CGPA +0.3, Communication +2, GitHub +3
+```
+
+**Key Features:**
+- `StudentProfileSnapshot` tracks semester-by-semester progress
+- Simulates: CGPA drift, communication improvement, GitHub project addition
+- Credibility evolution tracking (LOW → MEDIUM → HIGH)
+
+#### 🤖 Upgrade 3: Learning-Based Success Probability
+Custom **Logistic Regression** (no sklearn dependency!) trained on historical placement data.
+
+```python
+from upgrades import PlacementSuccessPredictor, prepare_training_data
+
+predictor = PlacementSuccessPredictor()
+training_data = prepare_training_data(students, companies, logs, calculate_credibility)
+predictor.train(training_data)
+
+prediction = predictor.predict(student, company, credibility_score, risk_score, skill_match)
+
+# Output:
+# Success Probability: 73.2%
+# Confidence: HIGH
+# Feature Importance:
+#   skill_match_ratio: 41.3%
+#   cgpa: 22.2%
+#   credibility_score: 19.5%
+```
+
+**Key Features:**
+- Pure Python implementation with gradient descent
+- Returns: probability + confidence (HIGH/MEDIUM/LOW) + feature importance
+- Insight: skill_match_ratio is the most important predictor (41.3%)
+
+#### 🔧 Upgrade 4: Credibility Penalty Bug Fix
+**Bug in v1**: Unfairly penalized students with many skills.
+
+**Fix:**
+1. Apply inflation penalty **per inflated skill** (not cumulative)
+2. **Cap total penalty at 0.6** (prevents over-penalization)
+3. **Quality-weighted normalization** (not simple average)
+
+```python
+from upgrades import validate_credibility_fix
+
+result = validate_credibility_fix()
+
+# Output:
+# Student A (3 strong skills): Score = 0.79, Level = HIGH
+# Student B (8 weak inflated): Score = 0.00, Level = LOW
+# Result: PASS - Quality beats quantity ✅
+```
+
+#### ⚖️ Upgrade 5: Bias & Fairness Audit
+Analyze placement outcomes for potential bias.
+
+```python
+from upgrades import conduct_bias_audit, generate_bias_audit_report
+
+audit = conduct_bias_audit(students, companies, logs, calculate_credibility_v2)
+print(generate_bias_audit_report(audit))
+
+# Output:
+# CGPA Bucket Analysis:
+#   low (5.0-6.5): 0.0% selected
+#   star (8.5+): 38.0% selected
+#
+# Skill vs GPA Comparison:
+#   Skill-heavy students: 33.3% success
+#   GPA-heavy students: 20.7% success
+#   Conclusion: Skill evidence outweighs GPA ✅
+#
+# Overall Fairness Score: 80.4/100 - EXCELLENT
+```
+
+**Key Features:**
+- Selection rate by: CGPA bucket, credibility level, branch, communication
+- Skill-heavy vs GPA-heavy comparison
+- Actionable recommendations for placement cell
 
 ---
 
@@ -124,14 +262,13 @@ Contributing Factors:
 placement llm/
 ├── data_engine.py         # Data models + synthetic generator
 ├── intelligence.py        # Credibility, risk, matching logic
+├── upgrades.py           # 5 mandatory upgrades (v2.0)
 ├── app.py                # Streamlit dashboard (7 pages)
 ├── students.json         # 50 students with evidence data
 ├── jobs.json            # 12 companies with eligibility rules
 ├── logs.json            # 120 placement outcomes
 ├── requirements.txt     # Python dependencies
-├── README.md           # This file
-├── PROJECT_UPDATE.md   # Feature specification
-└── IMPLEMENTATION_ROADMAP.md  # Detailed implementation guide
+└── README.md           # This file
 ```
 
 ### Core Components
@@ -455,6 +592,17 @@ python intelligence.py
 ```
 **Expected output:** Credibility test, risk test, matching test, student/officer explanations
 
+### Test v2.0 Upgrades
+```bash
+python upgrades.py
+```
+**Expected output:** All 5 upgrades demo with:
+- Seat allocation summary (Selected/Rejected with cutoff)
+- Student growth timeline (Semester 5-8)
+- ML prediction with confidence and feature importance
+- Credibility fix validation (PASS - Quality beats quantity)
+- Bias audit report (Fairness score: 80+/100)
+
 ### Test Dashboard
 ```bash
 streamlit run app.py
@@ -535,6 +683,7 @@ python -c "from intelligence import *; from data_engine import load_from_json; s
   "company_name": "Microsoft IDC",
   "company_type": "MNC",
   "role": "Full Stack Developer",
+  "open_positions": 5,  # NEW in v2.0
   "eligibility_rules": {
     "min_cgpa": 8.3,
     "max_backlogs": 0,
@@ -567,20 +716,24 @@ python -c "from intelligence import *; from data_engine import load_from_json; s
 
 ## 🔮 Future Enhancements
 
-### Phase 2 (Planned)
+### Completed in v2.0 ✅
+- [x] Company seat allocation with ranking
+- [x] Student profile temporal tracking (semester 5-8)
+- [x] ML-based success probability prediction
+- [x] Credibility penalty bug fix (quality > quantity)
+- [x] Bias & fairness auditing
+
+### Phase 3 (Planned)
 - [ ] Company analysis dashboard (7th page)
 - [ ] Student profile editing
 - [ ] Batch job matching (match all students to all jobs)
 - [ ] Excel/CSV import for real student data
 - [ ] Email notification system
-
-### Phase 3 (Advanced)
 - [ ] LangChain integration for semantic skill matching
 - [ ] ChromaDB vector store for skill embeddings
 - [ ] PostgreSQL for production deployment
 - [ ] Resume PDF parsing (extract skills, projects, GitHub)
 - [ ] Interview scheduling automation
-- [ ] Multi-agent orchestration
 
 ---
 
