@@ -70,6 +70,7 @@ class WeightPolicy(BaseModel):
     gpa_weight: float = Field(ge=0.2, le=0.5)
     skill_weight: float = Field(ge=0.3, le=0.6)
     communication_weight: float = Field(ge=0.1, le=0.3)
+    mock_interview_weight: float = Field(ge=0.0, le=0.2, default=0.1)
 
 
 class JobDescription(BaseModel):
@@ -81,6 +82,7 @@ class JobDescription(BaseModel):
     eligibility_rules: EligibilityRules
     weight_policy: WeightPolicy
     risk_tolerance: str = Field(description="low, medium, high")
+    open_positions: int = Field(ge=1, le=50, default=5, description="Number of open positions for this role")
 
 
 class PlacementLog(BaseModel):
@@ -331,7 +333,8 @@ class SyntheticDataGenerator:
                 role=role,
                 eligibility_rules=eligibility,
                 weight_policy=weights,
-                risk_tolerance="low"
+                risk_tolerance="low",
+                open_positions=random.randint(3, 8)  # MNCs: selective hiring
             )
             jobs.append(job)
         
@@ -361,7 +364,8 @@ class SyntheticDataGenerator:
                 role=role,
                 eligibility_rules=eligibility,
                 weight_policy=weights,
-                risk_tolerance="high"
+                risk_tolerance="high",
+                open_positions=random.randint(2, 5)  # Startups: small teams
             )
             jobs.append(job)
         
@@ -391,7 +395,8 @@ class SyntheticDataGenerator:
                 role=role,
                 eligibility_rules=eligibility,
                 weight_policy=weights,
-                risk_tolerance="medium"
+                risk_tolerance="medium",
+                open_positions=random.randint(5, 12)  # Product: moderate hiring
             )
             jobs.append(job)
         
@@ -421,7 +426,8 @@ class SyntheticDataGenerator:
                 role=role,
                 eligibility_rules=eligibility,
                 weight_policy=weights,
-                risk_tolerance="medium"
+                risk_tolerance="medium",
+                open_positions=random.randint(15, 50)  # Service: mass hiring
             )
             jobs.append(job)
         
