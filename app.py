@@ -117,7 +117,7 @@ st.markdown("""
 
 # ==================== DATA LOADING ====================
 
-@st.cache_data
+@st.cache_data(ttl=1)  # Cache for only 1 second to allow quick updates
 def load_data():
     """Load all data - from PostgreSQL if available, otherwise from JSON"""
     
@@ -649,10 +649,20 @@ def render_data_import():
                             # Append new students
                             all_students = existing_students + students
                             
-                            # Save
+                            # Save to JSON
                             save_to_json(all_students, companies, logs)
                             
-                            st.success(f"✅ Successfully imported {len(students)} students!")
+                            # Save to PostgreSQL if available
+                            if USE_DATABASE:
+                                try:
+                                    db = DatabaseManager()
+                                    db.bulk_save_students(students)
+                                    st.success(f"✅ Successfully imported {len(students)} students to database!")
+                                except Exception as e:
+                                    st.warning(f"⚠️ Saved to JSON but database error: {e}")
+                            else:
+                                st.success(f"✅ Successfully imported {len(students)} students!")
+                            
                             st.balloons()
                             
                             # Show summary
@@ -668,6 +678,9 @@ def render_data_import():
                                 st.metric("Avg CGPA", f"{avg_cgpa:.2f}")
                             
                             st.info("💡 Data saved to students.json. Refresh the page to see updated data.")
+                            
+                            # Force rerun to update all pages
+                            st.rerun()
             
             except Exception as e:
                 st.error(f"Error reading file: {str(e)}")
@@ -713,10 +726,20 @@ def render_data_import():
                             # Append new companies
                             all_companies = existing_companies + companies
                             
-                            # Save
+                            # Save to JSON
                             save_to_json(students, all_companies, logs)
                             
-                            st.success(f"✅ Successfully imported {len(companies)} companies!")
+                            # Save to PostgreSQL if available
+                            if USE_DATABASE:
+                                try:
+                                    db = DatabaseManager()
+                                    db.bulk_save_companies(companies)
+                                    st.success(f"✅ Successfully imported {len(companies)} companies to database!")
+                                except Exception as e:
+                                    st.warning(f"⚠️ Saved to JSON but database error: {e}")
+                            else:
+                                st.success(f"✅ Successfully imported {len(companies)} companies!")
+                            
                             st.balloons()
                             
                             # Show summary
@@ -732,6 +755,9 @@ def render_data_import():
                                 st.metric("Avg CGPA Req", f"{avg_cgpa_req:.1f}")
                             
                             st.info("💡 Data saved to jobs.json. Refresh the page to see updated data.")
+                            
+                            # Force rerun to update all pages
+                            st.rerun()
             
             except Exception as e:
                 st.error(f"Error reading file: {str(e)}")
