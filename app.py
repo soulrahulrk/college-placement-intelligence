@@ -13,8 +13,20 @@ import plotly.express as px
 import plotly.graph_objects as go
 from typing import List, Dict
 import json
+import io
+from datetime import datetime
 
-from data_engine import load_from_json, StudentProfile, JobDescription, PlacementLog
+from data_engine import (
+    load_from_json, 
+    StudentProfile, 
+    JobDescription, 
+    PlacementLog,
+    Skill,
+    SkillEvidence,
+    EligibilityRules,
+    WeightPolicy,
+    save_to_json
+)
 from intelligence import (
     calculate_credibility,
     calculate_risk,
@@ -109,13 +121,14 @@ def render_sidebar():
         page = st.radio(
             "Navigation",
             [
-                " Overview Dashboard",
-                " Student Analysis",
-                " Company Analysis",
-                " Credibility Dashboard",
-                " Risk Assessment",
-                " Fake Skill Detection",
-                " Placement Analytics"
+                "🏠 Overview Dashboard",
+                "👤 Student Analysis",
+                "🏢 Company Analysis",
+                "🎯 Credibility Dashboard",
+                "⚠️ Risk Assessment",
+                "🚨 Fake Skill Detection",
+                "📊 Placement Analytics",
+                "📥 Data Import"  # New page
             ],
             index=0
         )
@@ -544,20 +557,409 @@ def render_placement_analytics(logs: List[PlacementLog]):
     st.plotly_chart(fig, use_container_width=True)
 
 
+# ==================== DATA IMPORT PAGE ====================
+
+def render_data_import():
+    """Data import page - Upload students/companies via Excel/CSV"""
+    st.markdown('<div class="main-header">📥 Data Import</div>', unsafe_allow_html=True)
+    st.markdown("---")
+    
+    st.info("""
+    **Upload student and company data** using Excel (.xlsx) or CSV (.csv) files.
+    
+    ✅ Supports batch imports  
+    ✅ Auto-validation with Pydantic models  
+    ✅ Saves to existing JSON files  
+    """)
+    
+    tab1, tab2, tab3 = st.tabs(["📚 Import Students", "🏢 Import Companies", "📄 Download Templates"])
+    
+    # ==================== IMPORT STUDENTS ====================
+    with tab1:
+        st.subheader("Upload Student Data")
+        
+        uploaded_file = st.file_uploader(
+            "Choose a file (Excel or CSV)",
+            type=['xlsx', 'csv'],
+            key='student_upload',
+            help="Upload file with student data. See 'Download Templates' tab for format."
+        )
+        
+        if uploaded_file:
+            try:
+                # Read file
+                if uploaded_file.name.endswith('.csv'):
+                    df = pd.read_csv(uploaded_file)
+                else:
+                    df = pd.read_excel(uploaded_file)
+                
+                st.write("**Preview:**")
+                st.dataframe(df.head())
+                
+                # Validate and convert
+                if st.button("✅ Validate & Import Students", type="primary"):
+                    with st.spinner("Validating student data..."):
+                        students, errors = validate_and_import_students(df)
+                        
+                        if errors:
+                            st.error(f"**Validation errors found ({len(errors)}):**")
+                            for error in errors[:10]:  # Show first 10 errors
+                                st.warning(error)
+                        else:
+                            # Load existing data
+                            existing_students, companies, logs = load_from_json()
+                            
+                            # Append new students
+                            all_students = existing_students + students
+                            
+                            # Save
+                            save_to_json(all_students, companies, logs)
+                            
+                            st.success(f"✅ Successfully imported {len(students)} students!")
+                            st.balloons()
+                            
+                            # Show summary
+                            st.write("**Import Summary:**")
+                            col1, col2, col3 = st.columns(3)
+                            with col1:
+                                st.metric("Students Added", len(students))
+                            with col2:
+                                high_cred = sum(1 for s in students if calculate_credibility(s).level == "HIGH")
+                                st.metric("HIGH Credibility", high_cred)
+                            with col3:
+                                avg_cgpa = sum(s.cgpa for s in students) / len(students) if students else 0
+                                st.metric("Avg CGPA", f"{avg_cgpa:.2f}")
+                            
+                            st.info("💡 Data saved to students.json. Refresh the page to see updated data.")
+            
+            except Exception as e:
+                st.error(f"Error reading file: {str(e)}")
+        
+        else:
+            st.info("👆 Upload a file to get started")
+    
+    # ==================== IMPORT COMPANIES ====================
+    with tab2:
+        st.subheader("Upload Company Data")
+        
+        uploaded_file = st.file_uploader(
+            "Choose a file (Excel or CSV)",
+            type=['xlsx', 'csv'],
+            key='company_upload',
+            help="Upload file with company data. See 'Download Templates' tab for format."
+        )
+        
+        if uploaded_file:
+            try:
+                # Read file
+                if uploaded_file.name.endswith('.csv'):
+                    df = pd.read_csv(uploaded_file)
+                else:
+                    df = pd.read_excel(uploaded_file)
+                
+                st.write("**Preview:**")
+                st.dataframe(df.head())
+                
+                # Validate and convert
+                if st.button("✅ Validate & Import Companies", type="primary"):
+                    with st.spinner("Validating company data..."):
+                        companies, errors = validate_and_import_companies(df)
+                        
+                        if errors:
+                            st.error(f"**Validation errors found ({len(errors)}):**")
+                            for error in errors[:10]:
+                                st.warning(error)
+                        else:
+                            # Load existing data
+                            students, existing_companies, logs = load_from_json()
+                            
+                            # Append new companies
+                            all_companies = existing_companies + companies
+                            
+                            # Save
+                            save_to_json(students, all_companies, logs)
+                            
+                            st.success(f"✅ Successfully imported {len(companies)} companies!")
+                            st.balloons()
+                            
+                            # Show summary
+                            st.write("**Import Summary:**")
+                            col1, col2, col3 = st.columns(3)
+                            with col1:
+                                st.metric("Companies Added", len(companies))
+                            with col2:
+                                mnc_count = sum(1 for c in companies if c.company_type == "MNC")
+                                st.metric("MNCs", mnc_count)
+                            with col3:
+                                avg_cgpa_req = sum(c.eligibility_rules.min_cgpa for c in companies) / len(companies) if companies else 0
+                                st.metric("Avg CGPA Req", f"{avg_cgpa_req:.1f}")
+                            
+                            st.info("💡 Data saved to jobs.json. Refresh the page to see updated data.")
+            
+            except Exception as e:
+                st.error(f"Error reading file: {str(e)}")
+        
+        else:
+            st.info("👆 Upload a file to get started")
+    
+    # ==================== DOWNLOAD TEMPLATES ====================
+    with tab3:
+        st.subheader("Download Data Templates")
+        
+        st.info("Download Excel templates with the correct format and sample data.")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("### 📚 Student Template")
+            
+            # Create sample student data
+            sample_students = pd.DataFrame({
+                'student_id': ['S999', 'S998'],
+                'name': ['Rahul Kumar', 'Priya Sharma'],
+                'branch': ['CSE', 'IT'],
+                'cgpa': [8.5, 7.8],
+                'active_backlogs': [0, 1],
+                'communication_score': [8, 7],
+                'mock_interview_score': [7, 6],
+                'email': ['rahul@college.edu', 'priya@college.edu'],
+                'phone': ['+91-9876543210', '+91-9876543211'],
+                'skills': [
+                    'Python:advanced:github=True,projects=3,certifications=2,internship=True|DSA:intermediate:github=True,projects=2,certifications=1,internship=False',
+                    'Java:intermediate:github=True,projects=2,certifications=1,internship=False|React:beginner:github=False,projects=1,certifications=0,internship=False'
+                ]
+            })
+            
+            # Convert to Excel
+            buffer = io.BytesIO()
+            with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                sample_students.to_excel(writer, index=False, sheet_name='Students')
+            
+            st.download_button(
+                label="⬇️ Download Student Template.xlsx",
+                data=buffer.getvalue(),
+                file_name="student_template.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
+            
+            st.markdown("""
+            **Format:**
+            - `student_id`: Unique ID (e.g., S001)
+            - `name`: Full name
+            - `branch`: CSE/IT/AI/ECE/ME
+            - `cgpa`: 5.0 to 9.8
+            - `active_backlogs`: 0 to 5
+            - `communication_score`: 1 to 10
+            - `mock_interview_score`: 1 to 10
+            - `email`: Email address
+            - `phone`: Phone number
+            - `skills`: Format: `SkillName:level:github=bool,projects=int,certifications=int,internship=bool|NextSkill...`
+            """)
+        
+        with col2:
+            st.markdown("### 🏢 Company Template")
+            
+            # Create sample company data
+            sample_companies = pd.DataFrame({
+                'company_id': ['C999', 'C998'],
+                'company_name': ['TechCorp India', 'InnoSoft'],
+                'company_type': ['MNC', 'Startup'],
+                'role': ['Software Engineer', 'Full Stack Developer'],
+                'open_positions': [5, 3],
+                'min_cgpa': [7.5, 7.0],
+                'max_backlogs': [0, 1],
+                'mandatory_skills': ['DSA,Python', 'JavaScript,React'],
+                'preferred_skills': ['Git,Docker', 'Node.js,MongoDB'],
+                'gpa_weight': [0.3, 0.25],
+                'skill_weight': [0.4, 0.5],
+                'communication_weight': [0.2, 0.15],
+                'mock_interview_weight': [0.1, 0.1],
+                'risk_tolerance': ['low', 'medium']
+            })
+            
+            # Convert to Excel
+            buffer = io.BytesIO()
+            with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+                sample_companies.to_excel(writer, index=False, sheet_name='Companies')
+            
+            st.download_button(
+                label="⬇️ Download Company Template.xlsx",
+                data=buffer.getvalue(),
+                file_name="company_template.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
+            
+            st.markdown("""
+            **Format:**
+            - `company_id`: Unique ID (e.g., C001)
+            - `company_name`: Company name
+            - `company_type`: MNC/Startup/Product/Service
+            - `role`: Job title
+            - `open_positions`: 1 to 50
+            - `min_cgpa`: 6.0 to 8.5
+            - `max_backlogs`: 0 to 2
+            - `mandatory_skills`: Comma-separated (e.g., DSA,Python)
+            - `preferred_skills`: Comma-separated
+            - `gpa_weight`: 0.2 to 0.5
+            - `skill_weight`: 0.3 to 0.6
+            - `communication_weight`: 0.1 to 0.3
+            - `mock_interview_weight`: 0.0 to 0.2
+            - `risk_tolerance`: low/medium/high
+            """)
+
+
+def validate_and_import_students(df: pd.DataFrame) -> tuple[List[StudentProfile], List[str]]:
+    """Validate and convert DataFrame to StudentProfile objects"""
+    students = []
+    errors = []
+    
+    required_columns = ['student_id', 'name', 'branch', 'cgpa', 'active_backlogs', 
+                       'communication_score', 'mock_interview_score', 'email', 'phone', 'skills']
+    
+    # Check required columns
+    missing = set(required_columns) - set(df.columns)
+    if missing:
+        errors.append(f"Missing required columns: {', '.join(missing)}")
+        return [], errors
+    
+    for idx, row in df.iterrows():
+        try:
+            # Parse skills
+            skills = []
+            skills_str = str(row['skills'])
+            
+            if pd.notna(skills_str) and skills_str.strip():
+                skill_entries = skills_str.split('|')
+                
+                for skill_entry in skill_entries:
+                    parts = skill_entry.split(':')
+                    if len(parts) >= 3:
+                        skill_name = parts[0].strip()
+                        claimed_level = parts[1].strip()
+                        evidence_str = parts[2].strip()
+                        
+                        # Parse evidence
+                        evidence_dict = {}
+                        for pair in evidence_str.split(','):
+                            if '=' in pair:
+                                key, value = pair.split('=')
+                                key = key.strip()
+                                value = value.strip()
+                                
+                                if key in ['github', 'internship']:
+                                    evidence_dict[key] = value.lower() == 'true'
+                                elif key in ['projects', 'certifications']:
+                                    evidence_dict[key] = int(value)
+                        
+                        skill = Skill(
+                            name=skill_name,
+                            claimed_level=claimed_level,
+                            evidence=SkillEvidence(**evidence_dict)
+                        )
+                        skills.append(skill)
+            
+            # Create student profile
+            student = StudentProfile(
+                student_id=str(row['student_id']),
+                name=str(row['name']),
+                branch=str(row['branch']),
+                cgpa=float(row['cgpa']),
+                active_backlogs=int(row['active_backlogs']),
+                skills=skills,
+                communication_score=int(row['communication_score']),
+                mock_interview_score=int(row['mock_interview_score']),
+                resume_trust_score=0.5,  # Will be calculated
+                email=str(row['email']),
+                phone=str(row['phone'])
+            )
+            
+            students.append(student)
+        
+        except Exception as e:
+            errors.append(f"Row {idx + 2}: {str(e)}")
+    
+    return students, errors
+
+
+def validate_and_import_companies(df: pd.DataFrame) -> tuple[List[JobDescription], List[str]]:
+    """Validate and convert DataFrame to JobDescription objects"""
+    companies = []
+    errors = []
+    
+    required_columns = ['company_id', 'company_name', 'company_type', 'role', 'open_positions',
+                       'min_cgpa', 'max_backlogs', 'mandatory_skills', 'preferred_skills',
+                       'gpa_weight', 'skill_weight', 'communication_weight', 
+                       'mock_interview_weight', 'risk_tolerance']
+    
+    # Check required columns
+    missing = set(required_columns) - set(df.columns)
+    if missing:
+        errors.append(f"Missing required columns: {', '.join(missing)}")
+        return [], errors
+    
+    for idx, row in df.iterrows():
+        try:
+            # Parse skills lists
+            mandatory_skills = [s.strip() for s in str(row['mandatory_skills']).split(',') if s.strip()]
+            preferred_skills = [s.strip() for s in str(row['preferred_skills']).split(',') if s.strip()]
+            
+            # Create eligibility rules
+            eligibility = EligibilityRules(
+                min_cgpa=float(row['min_cgpa']),
+                max_backlogs=int(row['max_backlogs']),
+                mandatory_skills=mandatory_skills,
+                preferred_skills=preferred_skills
+            )
+            
+            # Create weight policy
+            weights = WeightPolicy(
+                gpa_weight=float(row['gpa_weight']),
+                skill_weight=float(row['skill_weight']),
+                communication_weight=float(row['communication_weight']),
+                mock_interview_weight=float(row['mock_interview_weight'])
+            )
+            
+            # Create job description
+            company = JobDescription(
+                company_id=str(row['company_id']),
+                company_name=str(row['company_name']),
+                company_type=str(row['company_type']),
+                role=str(row['role']),
+                open_positions=int(row['open_positions']),
+                eligibility_rules=eligibility,
+                weight_policy=weights,
+                risk_tolerance=str(row['risk_tolerance'])
+            )
+            
+            companies.append(company)
+        
+        except Exception as e:
+            errors.append(f"Row {idx + 2}: {str(e)}")
+    
+    return companies, errors
+
+
 # ==================== MAIN APP ====================
 
 def main():
     """Main application entry point"""
     
+    # Render sidebar first (always available)
+    page = render_sidebar()
+    
     # Load data
     students, companies, logs = load_data()
     
-    if not students:
-        st.error("No data available. Please run data_engine.py first to generate sample data.")
+    # Allow Data Import even when no data exists
+    if "Data Import" in page:
+        render_data_import()
         return
     
-    # Render sidebar and get selected page
-    page = render_sidebar()
+    if not students:
+        st.warning("⚠️ No data available. You can either:")
+        st.info("1. Run `python data_engine.py` to generate sample data, OR")
+        st.info("2. Use the **📥 Data Import** page to upload your own student/company data")
+        return
     
     # Route to appropriate page
     if "Overview" in page:
