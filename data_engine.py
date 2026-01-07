@@ -40,8 +40,8 @@ class StudentProfile(BaseModel):
     student_id: str
     name: str
     branch: str = Field(description="CSE, IT, AI, DS, ECE, EEE, ME, CE, CHE, BT, IE")
-    cgpa: float = Field(ge=5.0, le=9.8, description="CGPA on 10-point scale")
-    active_backlogs: int = Field(ge=0, le=5, description="Number of active backlogs")
+    cgpa: float = Field(ge=0.0, le=10.0, description="CGPA on 10-point scale (0.0-10.0)")
+    active_backlogs: int = Field(ge=0, le=10, description="Number of active backlogs")
     skills: List[Skill]
     communication_score: int = Field(ge=1, le=10, description="Communication ability (1-10)")
     mock_interview_score: int = Field(ge=1, le=10, description="Mock interview performance (1-10)")
@@ -52,8 +52,8 @@ class StudentProfile(BaseModel):
     @field_validator('cgpa')
     @classmethod
     def validate_cgpa(cls, v):
-        if v < 5.0 or v > 9.8:
-            raise ValueError('CGPA must be between 5.0 and 9.8')
+        if v < 0.0 or v > 10.0:
+            raise ValueError('CGPA must be between 0.0 and 10.0')
         return round(v, 2)
 
 
