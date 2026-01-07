@@ -45,6 +45,14 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Database import
+try:
+    from database import DatabaseManager
+    USE_DATABASE = True
+except ImportError:
+    USE_DATABASE = False
+    print("⚠️ Database module not available, using JSON files")
+
 # Grok API Configuration
 GROK_API_KEY = os.getenv("GROK_API_KEY", "")  # Set in .env file
 GROK_API_URL = "https://api.x.ai/v1/chat/completions"
@@ -111,12 +119,30 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    """Load all data with caching"""
+    """Load all data - from PostgreSQL if available, otherwise from JSON"""
+    
+    # Try PostgreSQL first
+    if USE_DATABASE:
+        try:
+            db = DatabaseManager()
+            students = db.get_all_students()
+            companies = db.get_all_companies()
+            logs = db.get_all_logs()
+            
+            if students or companies:  # If database has data
+                return students, companies, logs
+        except Exception as e:
+            st.warning(f"Database error: {e}. Falling back to JSON files.")
+    
+    # Fallback to JSON files
     try:
         students, jobs, logs = load_from_json()
         return students, jobs, logs
     except FileNotFoundError:
-        st.error("Data files not found. Please generate data first by running data_engine.py")
+        st.error("⚠️ No data found. Please either:")
+        st.info("1. Run `python data_engine.py` to generate sample data, OR")
+        st.info("2. Run `python migrate_to_db.py` to import JSON data to PostgreSQL, OR")
+        st.info("3. Use the **📥 Data Import** page to upload your data")
         return [], [], []
 
 
@@ -1078,28 +1104,41 @@ def match_student_to_companies(students: List[StudentProfile], companies: List[J
 
 def call_grok_api(messages: List[Dict], tools: List[Dict] = None) -> Dict:
     """Call Grok API with optional tool calling"""
+    
+    # Check if API key is configured
+    if not GROK_API_KEY or GROK_API_KEY == "":
+        return {"error": "Grok API key not configured. Please set GROK_API_KEY in .env file"}
+    
     headers = {
         "Authorization": f"Bearer {GROK_API_KEY}",
         "Content-Type": "application/json"
     }
     
+    # Simplified payload without tools for now (Grok may not support tool calling in beta)
     payload = {
         "model": "grok-beta",
         "messages": messages,
         "temperature": 0.7,
-        "max_tokens": 2000
+        "max_tokens": 1500
     }
     
-    if tools:
-        payload["tools"] = tools
-        payload["tool_choice"] = "auto"
+    # Note: Commenting out tools temporarily - Grok beta may not support function calling yet
+    # if tools:
+    #     payload["tools"] = tools
+    #     payload["tool_choice"] = "auto"
     
     try:
         response = requests.post(GROK_API_URL, headers=headers, json=payload, timeout=30)
         response.raise_for_status()
         return response.json()
+    except requests.exceptions.HTTPError as e:
+        return {"error": f"HTTP {e.response.status_code}: {e.response.text}"}
+    except requests.exceptions.Timeout:
+        return {"error": "Request timeout - Grok API took too long to respond"}
+    except requests.exceptions.ConnectionError:
+        return {"error": "Connection error - Could not reach Grok API"}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Unexpected error: {str(e)}"}
 
 def execute_tool_call(tool_name: str, tool_args: Dict, students: List[StudentProfile], 
                       companies: List[JobDescription], logs: List[PlacementLog]) -> str:
@@ -1238,83 +1277,127 @@ def render_ai_assistant():
         with st.chat_message("user"):
             st.write(user_input)
         
-        # Prepare messages for Grok API
-        system_message = {
-            "role": "system",
-            "content": f"""You are an AI assistant for a college placement intelligence system. You have access to tools that can query student data, company data, and placement logs.
-
-Current database status:
-- {len(students)} students enrolled
-- {len(companies)} companies registered
-- {len(logs)} placement logs
-
-When users ask questions:
-1. Use the available tools to fetch accurate data
-2. Provide clear, helpful answers
-3. For student queries, always mention credibility levels and red flags if present
-4. For placement recommendations, explain match scores and risk levels
-5. Be professional but friendly
-
-Available branches: CSE, IT, AI, DS, ECE, EEE, ME, CE, CHE, BT, IE
-"""
-        }
+        # Simple keyword-based tool detection (since Grok beta may not support function calling)
+        assistant_message = ""
+        user_lower = user_input.lower()
         
-        messages = [system_message] + [
-            {"role": msg["role"], "content": msg["content"]} 
-            for msg in st.session_state.chat_history
-        ]
-        
-        # Call Grok API with tool support
+        # Detect what the user wants
         with st.chat_message("assistant"):
-            with st.spinner("🤔 Thinking..."):
-                response = call_grok_api(messages, tools)
+            with st.spinner("🤔 Analyzing your question..."):
                 
-                if "error" in response:
-                    st.error(f"API Error: {response['error']}")
-                    assistant_message = f"Sorry, I encountered an error: {response['error']}"
-                else:
-                    # Handle tool calls
-                    choice = response.get("choices", [{}])[0]
-                    message = choice.get("message", {})
+                # Pattern 1: Student statistics
+                if any(keyword in user_lower for keyword in ["how many student", "total student", "number of student"]):
+                    stats = get_student_statistics(students)
+                    assistant_message = f"""📊 **Student Statistics:**
+
+**Total Students:** {stats['total_students']}
+**Average CGPA:** {stats['average_cgpa']}
+**High CGPA (≥8.0):** {stats['high_cgpa_count']} students
+
+**Branch Distribution:**
+{chr(10).join([f'- {branch}: {count} students' for branch, count in stats['branches'].items()])}
+
+**Credibility:**
+- High Credibility: {stats['high_credibility_count']} students
+- Low Credibility: {stats['low_credibility_count']} students"""
+                
+                # Pattern 2: Company statistics
+                elif any(keyword in user_lower for keyword in ["how many compan", "total compan", "company list"]):
+                    stats = get_company_statistics(companies)
+                    assistant_message = f"""🏢 **Company Statistics:**
+
+**Total Companies:** {stats['total_companies']}
+**Total Open Positions:** {stats['total_open_positions']}
+**Average CGPA Requirement:** {stats['average_cgpa_requirement']}
+
+**Company Types:**
+{chr(10).join([f'- {ctype}: {count} companies' for ctype, count in stats['company_types'].items()])}"""
+                
+                # Pattern 3: Search students
+                elif "search" in user_lower or "show me" in user_lower or "find" in user_lower:
+                    # Extract search term
+                    search_term = ""
+                    for branch in ["CSE", "IT", "AI", "DS", "ECE", "EEE", "ME", "CE", "CHE", "BT", "IE"]:
+                        if branch.lower() in user_lower:
+                            search_term = branch
+                            break
                     
-                    # Check if AI wants to use tools
-                    tool_calls = message.get("tool_calls", [])
+                    if not search_term:
+                        # Try to extract name or ID
+                        words = user_input.split()
+                        search_term = " ".join(words[-2:]) if len(words) >= 2 else words[-1]
                     
-                    if tool_calls:
-                        # Execute tool calls
-                        tool_messages = []
-                        for tool_call in tool_calls:
-                            function_name = tool_call["function"]["name"]
-                            function_args = json.loads(tool_call["function"]["arguments"])
-                            
-                            st.info(f"🔧 Using tool: {function_name}")
-                            
-                            # Execute the tool
-                            tool_result = execute_tool_call(
-                                function_name, function_args, students, companies, logs
-                            )
-                            
-                            tool_messages.append({
-                                "role": "tool",
-                                "tool_call_id": tool_call["id"],
-                                "name": function_name,
-                                "content": tool_result
-                            })
-                        
-                        # Add assistant message with tool calls
-                        messages.append(message)
-                        
-                        # Add tool results
-                        messages.extend(tool_messages)
-                        
-                        # Get final response from AI
-                        final_response = call_grok_api(messages)
-                        assistant_message = final_response.get("choices", [{}])[0].get("message", {}).get("content", "Sorry, I couldn't generate a response.")
+                    results = search_students(students, search_term)
+                    if results:
+                        assistant_message = f"🔍 **Found {len(results)} students matching '{search_term}':**\n\n"
+                        for i, s in enumerate(results[:5], 1):
+                            assistant_message += f"{i}. **{s['name']}** ({s['student_id']})\n"
+                            assistant_message += f"   - Branch: {s['branch']}, CGPA: {s['cgpa']}\n"
+                            assistant_message += f"   - Credibility: {s['credibility']}\n"
+                            assistant_message += f"   - Skills: {', '.join(s['skills'][:3])}\n\n"
                     else:
-                        # No tool calls, direct response
-                        assistant_message = message.get("content", "Sorry, I couldn't generate a response.")
+                        assistant_message = f"❌ No students found matching '{search_term}'"
+                
+                # Pattern 4: Student details
+                elif any(keyword in user_lower for keyword in ["details", "info", "about"]) and ("s0" in user_lower or "student" in user_lower):
+                    # Extract student ID
+                    student_id = None
+                    import re
+                    match = re.search(r'S\d+', user_input, re.IGNORECASE)
+                    if match:
+                        student_id = match.group().upper()
                     
-                    st.write(assistant_message)
+                    if student_id:
+                        details = get_student_details(students, student_id)
+                        if "error" not in details:
+                            assistant_message = f"""👤 **Student Details: {details['name']}**
+
+**Basic Info:**
+- Student ID: {details['student_id']}
+- Branch: {details['branch']}
+- CGPA: {details['cgpa']}
+- Active Backlogs: {details['active_backlogs']}
+- Communication Score: {details['communication_score']}/10
+
+**Credibility Analysis:**
+- Score: {details['credibility_score']:.2f}
+- Level: {details['credibility_level']}
+- Red Flags: {', '.join(details['red_flags']) if details['red_flags'] else 'None'}
+- Strengths: {', '.join(details['strengths']) if details['strengths'] else 'None'}
+
+**Top Skills:**
+{chr(10).join([f"- {s['name']} ({s['level']})" for s in details['skills'][:5]])}"""
+                        else:
+                            assistant_message = details['error']
+                    else:
+                        assistant_message = "Please specify a student ID (e.g., S001)"
+                
+                # Default: Use Grok API for general questions
+                else:
+                    # Prepare context-aware message
+                    context_message = {
+                        "role": "system",
+                        "content": f"""You are an AI assistant for a college placement system.
+
+Database: {len(students)} students, {len(companies)} companies, {len(logs)} placement logs
+Branches: CSE, IT, AI, DS, ECE, EEE, ME, CE, CHE, BT, IE
+
+Answer questions about placements professionally."""
+                    }
+                    
+                    messages = [context_message] + [
+                        {"role": msg["role"], "content": msg["content"]} 
+                        for msg in st.session_state.chat_history
+                    ]
+                    
+                    response = call_grok_api(messages)
+                    
+                    if "error" in response:
+                        assistant_message = f"⚠️ **API Error:** {response['error']}\n\n💡 Try asking:\n- 'How many students are there?'\n- 'Show me CSE students'\n- 'List all companies'"
+                    else:
+                        assistant_message = response.get("choices", [{}])[0].get("message", {}).get("content", "Sorry, I couldn't generate a response.")
+                
+                st.write(assistant_message)
         
         # Add assistant response to history
         st.session_state.chat_history.append({"role": "assistant", "content": assistant_message})
