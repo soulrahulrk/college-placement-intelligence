@@ -15,6 +15,7 @@ from typing import List, Dict
 import json
 import io
 from datetime import datetime
+import requests
 
 from data_engine import (
     load_from_json, 
@@ -38,6 +39,15 @@ from intelligence import (
     RiskResult,
     MatchResult
 )
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Grok API Configuration
+GROK_API_KEY = os.getenv("GROK_API_KEY", "")  # Set in .env file
+GROK_API_URL = "https://api.x.ai/v1/chat/completions"
 
 
 # ==================== PAGE CONFIG ====================
@@ -128,7 +138,8 @@ def render_sidebar():
                 "⚠️ Risk Assessment",
                 "🚨 Fake Skill Detection",
                 "📊 Placement Analytics",
-                "📥 Data Import"  # New page
+                "📥 Data Import",
+                "🤖 AI Assistant"  # New chatbot page
             ],
             index=0
         )
@@ -939,6 +950,402 @@ def validate_and_import_companies(df: pd.DataFrame) -> tuple[List[JobDescription
     return companies, errors
 
 
+# ==================== AI CHATBOT ASSISTANT ====================
+
+def get_student_statistics(students: List[StudentProfile]) -> Dict:
+    """Tool: Get student statistics"""
+    total = len(students)
+    if total == 0:
+        return {"error": "No students in database"}
+    
+    branches = {}
+    high_cgpa = 0
+    high_cred = 0
+    low_cred = 0
+    
+    for s in students:
+        branches[s.branch] = branches.get(s.branch, 0) + 1
+        if s.cgpa >= 8.0:
+            high_cgpa += 1
+        
+        cred = calculate_credibility(s)
+        if cred.level == "HIGH":
+            high_cred += 1
+        elif cred.level == "LOW":
+            low_cred += 1
+    
+    avg_cgpa = sum(s.cgpa for s in students) / total
+    
+    return {
+        "total_students": total,
+        "average_cgpa": round(avg_cgpa, 2),
+        "high_cgpa_count": high_cgpa,
+        "branches": branches,
+        "high_credibility_count": high_cred,
+        "low_credibility_count": low_cred
+    }
+
+def get_company_statistics(companies: List[JobDescription]) -> Dict:
+    """Tool: Get company statistics"""
+    total = len(companies)
+    if total == 0:
+        return {"error": "No companies in database"}
+    
+    types = {}
+    total_positions = 0
+    
+    for c in companies:
+        types[c.company_type] = types.get(c.company_type, 0) + 1
+        total_positions += c.open_positions
+    
+    avg_cgpa_req = sum(c.eligibility_rules.min_cgpa for c in companies) / total
+    
+    return {
+        "total_companies": total,
+        "company_types": types,
+        "total_open_positions": total_positions,
+        "average_cgpa_requirement": round(avg_cgpa_req, 2)
+    }
+
+def search_students(students: List[StudentProfile], query: str) -> List[Dict]:
+    """Tool: Search students by name, branch, or student_id"""
+    query_lower = query.lower()
+    results = []
+    
+    for s in students:
+        if (query_lower in s.name.lower() or 
+            query_lower in s.branch.lower() or 
+            query_lower in s.student_id.lower()):
+            
+            cred = calculate_credibility(s)
+            results.append({
+                "student_id": s.student_id,
+                "name": s.name,
+                "branch": s.branch,
+                "cgpa": s.cgpa,
+                "credibility": cred.level,
+                "skills": [sk.name for sk in s.skills]
+            })
+    
+    return results[:10]  # Limit to 10 results
+
+def get_student_details(students: List[StudentProfile], student_id: str) -> Dict:
+    """Tool: Get detailed information about a specific student"""
+    student = next((s for s in students if s.student_id == student_id), None)
+    
+    if not student:
+        return {"error": f"Student {student_id} not found"}
+    
+    cred = calculate_credibility(student)
+    
+    return {
+        "student_id": student.student_id,
+        "name": student.name,
+        "branch": student.branch,
+        "cgpa": student.cgpa,
+        "active_backlogs": student.active_backlogs,
+        "communication_score": student.communication_score,
+        "credibility_score": cred.score,
+        "credibility_level": cred.level,
+        "red_flags": cred.red_flags,
+        "strengths": cred.strengths,
+        "skills": [{"name": sk.name, "level": sk.claimed_level, "has_github": sk.evidence.github} for sk in student.skills]
+    }
+
+def match_student_to_companies(students: List[StudentProfile], companies: List[JobDescription], 
+                                 logs: List[PlacementLog], student_id: str) -> List[Dict]:
+    """Tool: Match a student to all companies and show results"""
+    student = next((s for s in students if s.student_id == student_id), None)
+    
+    if not student:
+        return [{"error": f"Student {student_id} not found"}]
+    
+    results = []
+    for company in companies:
+        match = match_student_to_job(student, company, logs)
+        results.append({
+            "company": company.company_name,
+            "role": company.role,
+            "decision": match.decision,
+            "match_score": round(match.match_score, 2),
+            "risk_level": match.risk.risk_level,
+            "failure_reason": match.failure_reason
+        })
+    
+    # Sort by match_score descending
+    results.sort(key=lambda x: x["match_score"], reverse=True)
+    return results
+
+def call_grok_api(messages: List[Dict], tools: List[Dict] = None) -> Dict:
+    """Call Grok API with optional tool calling"""
+    headers = {
+        "Authorization": f"Bearer {GROK_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "model": "grok-beta",
+        "messages": messages,
+        "temperature": 0.7,
+        "max_tokens": 2000
+    }
+    
+    if tools:
+        payload["tools"] = tools
+        payload["tool_choice"] = "auto"
+    
+    try:
+        response = requests.post(GROK_API_URL, headers=headers, json=payload, timeout=30)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        return {"error": str(e)}
+
+def execute_tool_call(tool_name: str, tool_args: Dict, students: List[StudentProfile], 
+                      companies: List[JobDescription], logs: List[PlacementLog]) -> str:
+    """Execute the requested tool and return results as JSON string"""
+    try:
+        if tool_name == "get_student_statistics":
+            result = get_student_statistics(students)
+        elif tool_name == "get_company_statistics":
+            result = get_company_statistics(companies)
+        elif tool_name == "search_students":
+            result = search_students(students, tool_args.get("query", ""))
+        elif tool_name == "get_student_details":
+            result = get_student_details(students, tool_args.get("student_id", ""))
+        elif tool_name == "match_student_to_companies":
+            result = match_student_to_companies(students, companies, logs, tool_args.get("student_id", ""))
+        else:
+            result = {"error": f"Unknown tool: {tool_name}"}
+        
+        return json.dumps(result, indent=2)
+    except Exception as e:
+        return json.dumps({"error": str(e)})
+
+def render_ai_assistant():
+    """AI Assistant chatbot page with Grok API and agentic capabilities"""
+    st.markdown('<div class="main-header">🤖 AI Placement Assistant</div>', unsafe_allow_html=True)
+    st.markdown("---")
+    
+    st.info("""
+    **Intelligent AI Assistant** powered by Grok AI with access to placement data.
+    
+    ✅ Ask about student statistics  
+    ✅ Search for students by name/branch  
+    ✅ Get company information  
+    ✅ Match students to companies  
+    ✅ Analyze credibility and risk  
+    """)
+    
+    # Load data
+    students, companies, logs = load_data()
+    
+    # Initialize chat history
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+    
+    # Define available tools for the AI
+    tools = [
+        {
+            "type": "function",
+            "function": {
+                "name": "get_student_statistics",
+                "description": "Get overall statistics about all students including total count, average CGPA, branch distribution, and credibility stats",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_company_statistics",
+                "description": "Get statistics about companies including total count, types (MNC/Startup/Product/Service), open positions, and CGPA requirements",
+                "parameters": {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "search_students",
+                "description": "Search for students by name, branch, or student ID. Returns list of matching students with basic info",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "query": {
+                            "type": "string",
+                            "description": "Search query (name, branch, or student ID)"
+                        }
+                    },
+                    "required": ["query"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_student_details",
+                "description": "Get detailed information about a specific student including CGPA, skills, credibility score, and red flags",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "student_id": {
+                            "type": "string",
+                            "description": "The student ID (e.g., S001, S002)"
+                        }
+                    },
+                    "required": ["student_id"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "match_student_to_companies",
+                "description": "Match a student to all companies and get placement recommendations with scores and risk levels",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "student_id": {
+                            "type": "string",
+                            "description": "The student ID to match (e.g., S001, S002)"
+                        }
+                    },
+                    "required": ["student_id"]
+                }
+            }
+        }
+    ]
+    
+    # Display chat history
+    for msg in st.session_state.chat_history:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+    
+    # Chat input
+    user_input = st.chat_input("Ask me anything about students, companies, or placements...")
+    
+    if user_input:
+        # Add user message to history
+        st.session_state.chat_history.append({"role": "user", "content": user_input})
+        
+        with st.chat_message("user"):
+            st.write(user_input)
+        
+        # Prepare messages for Grok API
+        system_message = {
+            "role": "system",
+            "content": f"""You are an AI assistant for a college placement intelligence system. You have access to tools that can query student data, company data, and placement logs.
+
+Current database status:
+- {len(students)} students enrolled
+- {len(companies)} companies registered
+- {len(logs)} placement logs
+
+When users ask questions:
+1. Use the available tools to fetch accurate data
+2. Provide clear, helpful answers
+3. For student queries, always mention credibility levels and red flags if present
+4. For placement recommendations, explain match scores and risk levels
+5. Be professional but friendly
+
+Available branches: CSE, IT, AI, DS, ECE, EEE, ME, CE, CHE, BT, IE
+"""
+        }
+        
+        messages = [system_message] + [
+            {"role": msg["role"], "content": msg["content"]} 
+            for msg in st.session_state.chat_history
+        ]
+        
+        # Call Grok API with tool support
+        with st.chat_message("assistant"):
+            with st.spinner("🤔 Thinking..."):
+                response = call_grok_api(messages, tools)
+                
+                if "error" in response:
+                    st.error(f"API Error: {response['error']}")
+                    assistant_message = f"Sorry, I encountered an error: {response['error']}"
+                else:
+                    # Handle tool calls
+                    choice = response.get("choices", [{}])[0]
+                    message = choice.get("message", {})
+                    
+                    # Check if AI wants to use tools
+                    tool_calls = message.get("tool_calls", [])
+                    
+                    if tool_calls:
+                        # Execute tool calls
+                        tool_messages = []
+                        for tool_call in tool_calls:
+                            function_name = tool_call["function"]["name"]
+                            function_args = json.loads(tool_call["function"]["arguments"])
+                            
+                            st.info(f"🔧 Using tool: {function_name}")
+                            
+                            # Execute the tool
+                            tool_result = execute_tool_call(
+                                function_name, function_args, students, companies, logs
+                            )
+                            
+                            tool_messages.append({
+                                "role": "tool",
+                                "tool_call_id": tool_call["id"],
+                                "name": function_name,
+                                "content": tool_result
+                            })
+                        
+                        # Add assistant message with tool calls
+                        messages.append(message)
+                        
+                        # Add tool results
+                        messages.extend(tool_messages)
+                        
+                        # Get final response from AI
+                        final_response = call_grok_api(messages)
+                        assistant_message = final_response.get("choices", [{}])[0].get("message", {}).get("content", "Sorry, I couldn't generate a response.")
+                    else:
+                        # No tool calls, direct response
+                        assistant_message = message.get("content", "Sorry, I couldn't generate a response.")
+                    
+                    st.write(assistant_message)
+        
+        # Add assistant response to history
+        st.session_state.chat_history.append({"role": "assistant", "content": assistant_message})
+    
+    # Sidebar with example queries
+    with st.sidebar:
+        st.markdown("---")
+        st.markdown("### 💡 Example Queries")
+        
+        example_queries = [
+            "How many students are there?",
+            "Show me CSE students",
+            "What companies are hiring?",
+            "Get details for student S001",
+            "Match student S001 to companies",
+            "Which students have low credibility?",
+            "Show me MNC companies",
+            "What is the average CGPA?"
+        ]
+        
+        for query in example_queries:
+            if st.button(query, key=f"example_{query}"):
+                st.session_state.chat_history.append({"role": "user", "content": query})
+                st.rerun()
+        
+        st.markdown("---")
+        if st.button("🗑️ Clear Chat History"):
+            st.session_state.chat_history = []
+            st.rerun()
+
+
 # ==================== MAIN APP ====================
 
 def main():
@@ -974,6 +1381,8 @@ def main():
         render_risk_assessment(students, companies, logs)
     elif "Placement Analytics" in page:
         render_placement_analytics(logs)
+    elif "AI Assistant" in page:
+        render_ai_assistant()
     else:
         st.info("Select a page from the sidebar")
 

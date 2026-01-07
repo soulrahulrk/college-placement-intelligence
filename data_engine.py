@@ -39,7 +39,7 @@ class StudentProfile(BaseModel):
     """Student data model - Indian engineering college context"""
     student_id: str
     name: str
-    branch: str = Field(description="CSE, IT, AI, ECE, ME")
+    branch: str = Field(description="CSE, IT, AI, DS, ECE, EEE, ME, CE, CHE, BT, IE")
     cgpa: float = Field(ge=5.0, le=9.8, description="CGPA on 10-point scale")
     active_backlogs: int = Field(ge=0, le=5, description="Number of active backlogs")
     skills: List[Skill]
@@ -101,8 +101,20 @@ class PlacementLog(BaseModel):
 class SyntheticDataGenerator:
     """Generate realistic Indian placement data with skill inflation patterns"""
     
-    # Indian engineering branches
-    BRANCHES = ["CSE", "IT", "AI", "ECE", "ME"]
+    # Indian engineering branches (expanded)
+    BRANCHES = [
+        "CSE",      # Computer Science Engineering
+        "IT",       # Information Technology
+        "AI",       # Artificial Intelligence
+        "DS",       # Data Science
+        "ECE",      # Electronics & Communication
+        "EEE",      # Electrical & Electronics
+        "ME",       # Mechanical Engineering
+        "CE",       # Civil Engineering
+        "CHE",      # Chemical Engineering
+        "BT",       # Biotechnology
+        "IE"        # Industrial Engineering
+    ]
     
     # Skill pools
     PROGRAMMING_SKILLS = ["Python", "Java", "C++", "JavaScript", "DSA", "SQL"]
