@@ -1,6 +1,6 @@
 # College Placement Intelligence System
 
-**A Realistic Indian Engineering College Placement Cell System with Resume Credibility Detection, Risk Assessment, ML-Based Predictions, and Explainable AI Decisions**
+**A Realistic Indian Engineering College Placement Cell System with Resume Credibility Detection, Risk Assessment, ML-Based Predictions, AI Chatbot, and Explainable AI Decisions**
 
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
 [![Pydantic V2](https://img.shields.io/badge/pydantic-V2-green.svg)](https://docs.pydantic.dev/)
@@ -21,30 +21,57 @@
 - ✅ **Resume credibility scoring** (0-1 scale based on evidence)
 - ✅ **Risk assessment** (LOW/MEDIUM/HIGH based on historical failures)
 - ✅ **Explainable decisions** (student + officer views)
-- ✅ **Indian context** (branches: CSE/IT/AI/ECE/ME, companies: TCS/Infosys/Google India)
+- ✅ **Indian context** (11 branches: CSE/IT/AI/DS/ECE/EEE/ME/CE/CHE/BT/IE)
 - ✅ **Seat allocation with ranking** (limited positions per company)
 - ✅ **ML-based success prediction** (custom Logistic Regression)
 - ✅ **Bias & fairness auditing** (CGPA vs skills analysis)
+- ✅ **🤖 AI Chatbot Assistant** (Grok-powered agentic AI for natural queries)
 
 **No assumptions. No shortcuts. Just working logic.**
 
 ---
 
-## 🆕 Version 2.0 - Major Upgrades
+## 🆕 Version 2.0 - Major Features
 
-### 5 Mandatory Upgrades Implemented
+### 5 Mandatory Upgrades + AI Assistant
 
-| Upgrade | Feature | Status |
-|---------|---------|--------|
+| Feature | Description | Status |
+|---------|-------------|--------|
 | **1** | Company Seat Allocation & Ranking | ✅ Complete |
 | **2** | Profile Improvement & Temporal Drift | ✅ Complete |
 | **3** | Learning-Based Success Probability | ✅ Complete |
 | **4** | Credibility Penalty Bug Fix | ✅ Complete |
 | **5** | Bias & Fairness Audit | ✅ Complete |
+| **🆕** | **AI Chatbot Assistant (Grok API)** | ✅ Complete |
+| **🆕** | **11 Engineering Branches** | ✅ Complete |
+| **🆕** | **Data Import (Excel/CSV)** | ✅ Complete |
 
-### Upgrade Details
+### 🤖 NEW: AI Chatbot Assistant
 
-#### 🏆 Upgrade 1: Company Seat Allocation & Ranking
+Intelligent AI-powered assistant using **Grok API** with **agentic capabilities**. Users can chat naturally to:
+
+- 📊 Get student/company statistics
+- 🔍 Search students by name/branch/ID
+- 💼 View company information
+- 🎯 Get placement recommendations
+- 📈 Analyze credibility and risks
+- ❓ Ask natural language questions
+
+**Agentic Tools (5 Functions):**
+1. `get_student_statistics` - Overall stats (total, avg CGPA, branches, credibility)
+2. `get_company_statistics` - Company analytics (types, positions, requirements)
+3. `search_students` - Search by name/branch/student_id
+4. `get_student_details` - Detailed student info with credibility analysis
+5. `match_student_to_companies` - Smart matching with scores and rankings
+
+**Example Queries:**
+- "How many students are there?"
+- "Show me CSE students with high CGPA"
+- "Match student S001 to all companies"
+- "Which companies are MNCs?"
+- "Get details for Rahul Kumar"
+
+### 🏆 Upgrade 1: Company Seat Allocation & Ranking
 Companies have **limited hiring slots** (not all eligible students get selected).
 
 ```python
@@ -236,14 +263,16 @@ Contributing Factors:
 
 ### 5. **Interactive Streamlit Dashboard** 📊
 
-#### **7 Dashboard Pages:**
+#### **9 Dashboard Pages:**
 1. **🏠 Overview Dashboard** - Credibility distribution, branch-wise stats, company types
 2. **👤 Student Analysis** - Individual student matching with all companies
 3. **🎯 Credibility Dashboard** - Resume trust scores, skill inflation detection
 4. **⚠️ Risk Assessment** - Company-specific risk analysis for all students
 5. **🚨 Fake Skill Detection** - Flag students with suspicious claims (CSV export)
 6. **📊 Placement Analytics** - Success rates, avg CGPA/communication of selected students
-7. **🏢 Company Analysis** - (Coming soon)
+7. **📥 Data Import** - Upload Excel/CSV files for students/companies (with templates)
+8. **🤖 AI Assistant** - Grok-powered chatbot for natural queries (NEW!)
+9. **🏢 Company Analysis** - (Coming soon)
 
 ---
 
@@ -256,14 +285,18 @@ Contributing Factors:
 - **Plotly** - Advanced visualizations
 - **Faker ('en_IN')** - Indian name generation
 - **Pandas** - Data manipulation
+- **Grok API** - AI-powered chatbot with agentic capabilities
+- **python-dotenv** - Secure API key management
 
 ### Project Structure
 ```
 placement llm/
-├── data_engine.py         # Data models + synthetic generator
+├── data_engine.py         # Data models + synthetic generator (11 branches)
 ├── intelligence.py        # Credibility, risk, matching logic
 ├── upgrades.py           # 5 mandatory upgrades (v2.0)
-├── app.py                # Streamlit dashboard (7 pages)
+├── app.py                # Streamlit dashboard (9 pages + AI chatbot)
+├── .env                  # API keys (DO NOT COMMIT)
+├── .env.example          # Template for environment variables
 ├── students.json         # 50 students with evidence data
 ├── jobs.json            # 12 companies with eligibility rules
 ├── logs.json            # 120 placement outcomes
@@ -374,9 +407,21 @@ logs = generator.generate_placement_logs(students, companies, 120)
 # Navigate to project directory
 cd "c:\Users\rahul\Documents\code\projects\placement llm"
 
-# Install dependencies
-pip install pydantic streamlit pandas plotly faker
+# Install all dependencies
+pip install -r requirements.txt
 ```
+
+### Setup Grok API (for AI Chatbot)
+
+1. Get your Grok API key from [console.x.ai](https://console.x.ai/)
+2. Copy `.env.example` to `.env`
+3. Add your API key to `.env`:
+
+```bash
+GROK_API_KEY=your_actual_grok_api_key_here
+```
+
+**⚠️ Important:** Never commit `.env` to Git. It's already in `.gitignore`.
 
 ### Generate Data
 
